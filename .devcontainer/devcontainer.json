@@ -74,21 +74,7 @@
                 "GitHub.copilot",
                 "GitHub.copilot-chat",
                 "GitHub.vscode-github-actions",
-                "GitHub.vscode-pull-request-github",
-                
-                // AI and Semantic Kernel
-                "ms-semantic-kernel.semantic-kernel",
-                "ms-toolsai.jupyter",
-                "ms-python.python",
-                
-                // Development Tools
-                "ms-vscode.powershell",
-                "ms-vscode-remote.remote-containers",
-                "redhat.vscode-yaml",
-                "ms-vscode.vscode-json",
-                "bradlc.vscode-tailwindcss",
-                "esbenp.prettier-vscode",
-                "ms-vsliveshare.vsliveshare"
+                "GitHub.vscode-pull-request-github"
             ]
         }
     },
