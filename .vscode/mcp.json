@@ -38,6 +38,11 @@
             "env": {
                 "GIPHY_API_KEY": "${input:giphy_api_key}"
             }
+        },
+        "ado": {
+            "type": "stdio",
+            "command": "mcp-server-azuredevops",
+            "args": ["${input:ado_org}"]
         }
     },
     "inputs": [
@@ -57,6 +62,11 @@
             "type": "promptString",
             "description": "Giphy API Key",
             "password": true
+        },
+        {
+            "id": "ado_org",
+            "type": "promptString",
+            "description": "Azure DevOps organization name  (e.g. 'contoso')"
         }
     ]
 }
