@@ -53,7 +53,8 @@ Prompt file examples are found in the [`.github/prompts/`](.github/prompts/) fol
 |--------------|-------|
 | [create_github_issues_for_unmet_spec_requirements.prompt.md](.github/prompts/create_github_issues_for_unmet_spec_requirements.prompt.md) | Create GitHub issues for requirements not met in specifications. |
 | [create_github_issue_feature_from_spec.prompt.md](.github/prompts/create_github_issue_feature_from_spec.prompt.md) | Generate GitHub issues for new features based on specifications. |
-| [create_spec.prompt.md](.github/prompts/create_spec.prompt.md) | Generate technical specifications for projects. |
+| [create_spec.prompt.md](.github/prompts/create_spec.prompt.md) | Create a new specification file for the solution, optimized for Generative AI consumption. |
+| [create_plan.prompt.md](.github/prompts/create_plan.prompt.md) | Create a new implementation plan file for features, refactoring, upgrades, or architecture, optimized for Generative AI. |
 | [dotnet_best_practices.prompt.md](.github/prompts/dotnet_best_practices.prompt.md) | Review .NET code for best practices and improvements. |
 | [dotnet_design_pattern_review.prompt.md](.github/prompts/dotnet_design_pattern_review.prompt.md) | Analyze .NET code for design pattern usage and recommendations. |
 | [update_avm_modules_in_bicep.prompt.md](.github/prompts/update_avm_modules_in_bicep.prompt.md) | Update Azure Verified Modules in Bicep templates. |
@@ -65,15 +66,16 @@ Chat mode examples are found in the [`.github/chatmodes/`](.github/chatmodes/) f
 
 | Example File | Usage |
 |--------------|-------|
-| [azure_verified_modules_bicep.chatmode.md](.github/chatmodes/azure_verified_modules_bicep.chatmode.md) | Specialized mode for working with Azure Verified Modules in Bicep templates. |
-| [expert_dotnet_software_engineer.chatmode.md](.github/chatmodes/expert_dotnet_software_engineer.chatmode.md) | Expert-level guidance for .NET software engineering tasks. |
-| [expert_react_frontend_engineer.chatmode.md](.github/chatmodes/expert_react_frontend_engineer.chatmode.md) | Expert-level guidance for React frontend development. |
-| [janitor.chatmode.md](.github/chatmodes/janitor.chatmode.md) | Code cleanup and maintenance tasks mode. |
-| [mentor.chatmode.md](.github/chatmodes/mentor.chatmode.md) | Provides guidance and support through questioning and hints. |
-| [plan.chatmode.md](.github/chatmodes/plan.chatmode.md) | Focused on creating implementation plans and project planning. |
-| [semantic_kernel_dotnet.chatmode.md](.github/chatmodes/semantic_kernel_dotnet.chatmode.md) | Specialized mode for Semantic Kernel .NET development. |
-| [semantic_kernel_python.chatmode.md](.github/chatmodes/semantic_kernel_python.chatmode.md) | Specialized mode for Semantic Kernel Python development. |
-| [specification.chatmode.md](.github/chatmodes/specification.chatmode.md) | Mode for creating technical specifications and documentation. |
+| [azure_verified_modules_bicep.chatmode.md](.github/chatmodes/azure_verified_modules_bicep.chatmode.md) | Azure Bicep: Guidance and tools for Azure Verified Modules in Bicep templates. |
+| [expert_dotnet_software_engineer.chatmode.md](.github/chatmodes/expert_dotnet_software_engineer.chatmode.md) | .NET Expert: Advanced .NET software engineering support and best practices. |
+| [expert_react_frontend_engineer.chatmode.md](.github/chatmodes/expert_react_frontend_engineer.chatmode.md) | React Expert: Advanced React frontend development guidance. |
+| [janitor.chatmode.md](.github/chatmodes/janitor.chatmode.md) | Code Janitor: Automated code cleanup, refactoring, and maintenance. |
+| [mentor.chatmode.md](.github/chatmodes/mentor.chatmode.md) | Mentor: Guidance, support, and learning through questions and hints. |
+| [plan.chatmode.md](.github/chatmodes/plan.chatmode.md) | Planning: Generates detailed implementation plans for new features or refactoring. |
+| [semantic_kernel_dotnet.chatmode.md](.github/chatmodes/semantic_kernel_dotnet.chatmode.md) | Semantic Kernel (.NET): Specialized for Semantic Kernel .NET plugin and orchestration development. |
+| [semantic_kernel_python.chatmode.md](.github/chatmodes/semantic_kernel_python.chatmode.md) | Semantic Kernel (Python): Specialized for Semantic Kernel Python plugin and orchestration development. |
+| [specification.chatmode.md](.github/chatmodes/specification.chatmode.md) | Specification: Technical specification and documentation authoring mode. |
+| [critical_thinking.chatmode.md](.github/chatmodes/critical_thinking.chatmode.md) | Critical Thinking: Challenges assumptions and encourages deep, reflective problem analysis. |
 
 ### Tool Sets
 
