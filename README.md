@@ -87,7 +87,9 @@ MCP Server configurations are found in the [`.vscode/mcp.json`](.vscode/mcp.json
 
 | Server Name | Usage |
 |-------------|-------|
+| microsoft.docs.mcp | Provides access to Microsoft Docs Model Context Protocol (MCP) for documentation and examples. |
 | filesystem | Provides file system access capabilities to Copilot for reading and writing files. |
 | playwright | Enables web automation and testing capabilities through Playwright. |
 | github | Integrates GitHub API functionality for repository operations and management. |
 | giphy | Adds GIF search and integration capabilities through the Giphy API. |
+| ado | Integrates Azure DevOps API for project management and CI/CD operations. |
