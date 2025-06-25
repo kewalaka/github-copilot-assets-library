@@ -67,6 +67,7 @@ Chat mode examples are found in the [`.github/chatmodes/`](.github/chatmodes/) f
 | Example File | Usage |
 |--------------|-------|
 | [azure_verified_modules_bicep.chatmode.md](.github/chatmodes/azure_verified_modules_bicep.chatmode.md) | Azure Bicep: Guidance and tools for Azure Verified Modules in Bicep templates. |
+| [azure_verified_modules_terraform.chatmode.md](.github/chatmodes/azure_verified_modules_terraform.chatmode.md) | Azure Terraform: Guidance and tools for Azure Verified Modules in Terraform configurations. |
 | [expert_dotnet_software_engineer.chatmode.md](.github/chatmodes/expert_dotnet_software_engineer.chatmode.md) | .NET Expert: Advanced .NET software engineering support and best practices. |
 | [expert_react_frontend_engineer.chatmode.md](.github/chatmodes/expert_react_frontend_engineer.chatmode.md) | React Expert: Advanced React frontend development guidance. |
 | [janitor.chatmode.md](.github/chatmodes/janitor.chatmode.md) | Code Janitor: Automated code cleanup, refactoring, and maintenance. |
