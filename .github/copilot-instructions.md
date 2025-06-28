@@ -1,20 +1,69 @@
-This is a .NET 9 solution that uses Generative AI to help users explore and query relational databases. It generates a detailed semantic model from a database and then uses that semanntic model to generate SQL queries or explain the structure of tables or stored procedures.
+This is a GitHub Copilot Assets Library that provides customization assets including Copilot Instructions, Prompt Files, Custom Chat Modes, and MCP Server configurations.
 
-When creating application code, provide comprehensive guidance and best practices for developing .NET 8 applications that are designed to run in Azure. Use the latest C# development features and language constructs to build a modern, scalable, and secure application.
+## Core Commands
 
-The key principles you should adopt when developing .NET 8 applications are:
-- Use the latest C# language features and constructs to build modern, scalable, and secure applications.
-- Use SOLID principles (Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion) to design and implement your application.
-- Adopt DRY (Don't Repeat Yourself) principles to reduce duplication and improve maintainability.
-- Use CleanCode patterns and practices to write clean, readable, and maintainable code.
-- Use self-explanatory and meaningful names for classes, methods, and variables to improve code readability and aim for self-documenting code.
-- Use Dependency Injection to manage dependencies and improve testability.
-- Use asynchronous programming to improve performance and scalability.
-- Include clear method documentation and comments to help developers understand the purpose and behavior of the code.
-- Prioritize secure coding practices, such as input validation, output encoding, and parameterized queries, to prevent common security vulnerabilities.
-- Use Semantic Kernel, Kernel Memory and Prompty SDKs to interact with the Generative AI models.
-- Prioritize using Microsoft NuGet packages and libraries to build your application when possible.
-- For unit tests, use MSTest, FluentAssertions, and Moq to write testable code and ensure that your application is reliable and robust. As well as using AAA pattern for test structure.
-- Make recommendations and provide guidance as if you were luminary software engineer, Martin Fowler.
+- **Documentation**: Use README.md as the primary source - contains comprehensive asset descriptions
+- **No build/test commands**: This is a documentation/asset library with no compiled code
+- **File validation**: Ensure Markdown syntax is valid for `.chatmode.md` and `.prompt.md` files
 
-When creating infrastructure as code, provide comprehensive guidance and best practices for developing reusable and reliable Infrastructure as Code using Bicep and PowerShell, prioritizing the Azure Well-Architected Framework pillars in this order: Security, Operational Excellence, Performance Efficiency, Reliability, and Cost Optimization. When creating infrastructure as code, provide comprehensive guidance and best practices for developing reusable and reliable Infrastructure as Code using Bicep and PowerShell, prioritizing the Azure Well-Architected Framework pillars in this order: Security, Operational Excellence, Performance Efficiency, Reliability, and Cost Optimization. The pipelines are built using GitHub Actions and should use the latest GitHub Actions task versions wherever possible.
+## Repository Architecture
+
+### Major Components
+- `.github/copilot-instructions.md` - Repository-level Copilot instructions
+- `.github/prompts/` - Reusable prompt files for common tasks
+- `.github/chatmodes/` - Custom chat modes with specialized instructions and tools
+- `.vscode/mcp.json` - Model Context Protocol server configurations
+- `.devcontainer/` - Development container for standardized environment
+
+### Key Asset Types
+- **Prompt Files**: Task-specific prompts (create specs, GitHub issues, code reviews)
+- **Chat Modes**: Specialized modes (expert engineers, planners, mentors, Azure modules)
+- **MCP Servers**: External integrations (Microsoft Docs, GitHub, Playwright, Giphy, Azure DevOps)
+
+## Style Rules
+
+### File Naming
+- Chat modes: `[descriptive-name].chatmode.md`
+- Prompts: `[descriptive-name].prompt.md`
+- Use lowercase with hyphens for file names
+
+### Markdown Standards
+- Follow front matter YAML structure exactly as shown in examples
+- Use proper heading hierarchy (# ## ###)
+- Include description and tools array in chat mode front matter
+- Include mode and description in prompt file front matter
+
+### Content Guidelines
+- **Precise Language**: Use explicit, unambiguous instructions
+- **Structured Format**: Use headings, bullets, tables for clarity
+- **No Boilerplate**: Avoid generic advice, focus on specific guidance
+- **Self-Contained**: Each asset should be complete and context-independent
+
+## Repository-Specific Rules
+
+### Chat Mode Development
+- Always include comprehensive tool arrays based on functionality needs
+- Structure instructions in clear sections with specific guidance
+- Reference industry experts/thought leaders for authority (e.g., Martin Fowler, Uncle Bob)
+- Specify target frameworks and versions explicitly
+
+### Prompt File Standards
+- Include variable substitution using `${input:VariableName}` syntax
+- Provide clear task descriptions and expected outcomes
+- Follow specification template structure for consistency
+- Include examples and edge cases where applicable
+
+### Commit Message Format
+Follow VSCode settings pattern:
+- First line: `[TYPE]: [50 char summary]` where TYPE is CHORE|FIX|CHANGE|BREAKING CHANGE|TESTS|SECURITY|COMPLEX
+- Second line: blank
+- Following lines: detailed summary with `-` bullets, prefix with `SECURITY:` or `BREAKING CHANGE:` as needed
+
+### Development Practices
+- Use .NET 8+ patterns and modern C# features when applicable
+- Follow Azure Well-Architected Framework pillars for infrastructure guidance
+- Prioritize security, operational excellence, performance, reliability, cost optimization
+- Reference Microsoft documentation and packages preferentially
+- Use MSTest, FluentAssertions, Moq for testing examples
+
+This library serves as a reference implementation for GitHub Copilot customizations across various development scenarios.
