@@ -37,13 +37,14 @@ Examples for Copilot Instructions can be found in the [.github/copilot-instructi
 |--------------|-------|
 | [.github/copilot-instructions.md](.github/copilot-instructions.md) | Place in your repo to set custom Copilot instructions for all contributors. |
 
-### Custom Code Generation Instructions
+### Custom Instructions Files
 
-Examples for Custom Code Generation Instructions can be found in the `.github/` folder (if present, e.g., `csharp-codegen-instructions.md`).
+Custom instruction files with specific language and framework guidance can be found in the [`.github/instructions/`](.github/instructions/) folder.
 
-| Example File | Usage |
-|--------------|-------|
-| `.github/csharp-codegen-instructions.md` | Add to your repo to guide Copilot's code generation for specific scenarios. |
+| Example File | Pattern | Usage |
+|--------------|---------|-------|
+| [csharp-14-best-practices.instructions.md](.github/instructions/csharp-14-best-practices.instructions.md) | `**/*.cs` | C# 14 best practices and formatting guidelines for AI code generation |
+| [csharp-best-practices.instructions.md](.github/instructions/csharp-best-practices.instructions.md) | `**/*.cs` | C# best practices and formatting guidelines for AI code generation (all versions) |
 
 ### Prompt Files
 

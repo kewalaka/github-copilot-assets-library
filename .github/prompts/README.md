@@ -24,5 +24,5 @@ A list of prompt files available in this repository:
 
 To use these prompt files:
 
-1. Copy the desired `.prompt.md` file to your VS Code user settings folder or workspace `.github` folder
+1. Copy the desired `.prompt.md` file to your VS Code user settings folder or workspace `.github/prompts` folder
 1. Access the prompt file through the chat interface in VS Code by typing `/` and selecting the prompt from the list

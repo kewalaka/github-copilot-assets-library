@@ -22,5 +22,5 @@ This folder contains example custom chat modes for GitHub Copilot. For more info
 
 To use these chat modes:
 
-1. Copy the desired `.chatmode.md` file to your VS Code user settings folder or workspace `.github` folder
+1. Copy the desired `.chatmode.md` file to your VS Code user settings folder or workspace `.github/chatmodes` folder
 1. Select the new chat mode through the chat interface in VS Code
