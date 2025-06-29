@@ -1,0 +1,223 @@
+name: Custom Chat Mode Proposal
+description: Propose a new custom chat mode for the assets library
+title: "[CHAT MODE] "
+labels: ["enhancement", "chat-mode"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for proposing a new custom chat mode! Please fill out the form below to help us understand your proposal.
+
+  - type: input
+    id: chat-mode-name
+    attributes:
+      label: Proposed Chat Mode Name
+      description: What should this chat mode be called?
+      placeholder: e.g., "Expert Python Data Scientist", "DevOps Engineer", "API Designer"
+    validations:
+      required: true
+
+  - type: textarea
+    id: brief-description
+    attributes:
+      label: Brief Description
+      description: One-sentence description of what this chat mode does
+      placeholder: This chat mode provides...
+    validations:
+      required: true
+
+  - type: textarea
+    id: target-use-cases
+    attributes:
+      label: Target Use Cases
+      description: What specific scenarios or problems does this chat mode address?
+      placeholder: Describe the main use cases and problems this chat mode solves...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: suggested-tools
+    attributes:
+      label: Suggested Tools
+      description: Which GitHub Copilot tools should this mode have access to?
+      options:
+        - label: workspace
+        - label: read_file
+        - label: list_dir
+        - label: semantic_search
+        - label: grep_search
+        - label: create_file
+        - label: replace_string_in_file
+        - label: run_in_terminal
+
+  - type: input
+    id: other-tools
+    attributes:
+      label: Other Tools
+      description: If you selected "Other" above, please specify
+      placeholder: List any additional tools needed
+
+  - type: textarea
+    id: technology-focus
+    attributes:
+      label: Technology/Domain Focus
+      description: What specific technologies, frameworks, or domains does this mode specialize in?
+      placeholder: e.g., Python, React, DevOps, Machine Learning, etc.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: skill-level
+    attributes:
+      label: Target Skill Level
+      description: What skill level is this chat mode designed for?
+      options:
+        - Beginner
+        - Intermediate
+        - Advanced
+        - Mixed
+    validations:
+      required: true
+
+  - type: textarea
+    id: core-expertise
+    attributes:
+      label: Core Expertise Areas
+      description: What specific knowledge areas should this mode excel in?
+      placeholder: |
+        1. First expertise area
+        2. Second expertise area
+        3. Third expertise area
+    validations:
+      required: true
+
+  - type: textarea
+    id: response-style
+    attributes:
+      label: Response Style and Guidelines
+      description: How should this mode communicate? What tone and approach should it take?
+      placeholder: Describe the communication style, tone, and approach...
+    validations:
+      required: true
+
+  - type: textarea
+    id: quality-standards
+    attributes:
+      label: Quality Standards
+      description: What specific standards, best practices, or conventions should this mode follow?
+      placeholder: List the quality standards and best practices...
+
+  - type: textarea
+    id: industry-references
+    attributes:
+      label: Industry References
+      description: Any specific thought leaders, frameworks, or methodologies this mode should reference?
+      placeholder: e.g., Martin Fowler, Uncle Bob, specific frameworks...
+
+  - type: textarea
+    id: example-scenarios
+    attributes:
+      label: Example Scenarios
+      description: Provide 2-3 specific examples of when someone would use this chat mode
+      placeholder: |
+        1. First scenario example
+        2. Second scenario example
+        3. Third scenario example
+    validations:
+      required: true
+
+  - type: textarea
+    id: sample-interaction
+    attributes:
+      label: Sample Interaction
+      description: Show a brief example of how this chat mode would respond to a typical question
+      placeholder: |
+        **User:** [Example question]
+        **Expected Response Style:** [How the mode should respond]
+    validations:
+      required: true
+
+  - type: textarea
+    id: differentiation
+    attributes:
+      label: How is this different from existing chat modes?
+      description: Explain what makes this chat mode unique and why it's needed
+      placeholder: Describe what makes this chat mode unique...
+    validations:
+      required: true
+
+  - type: textarea
+    id: similar-modes
+    attributes:
+      label: Similar Tools or Modes
+      description: Are there existing chat modes that are similar? How does this one differ?
+      placeholder: Compare with existing modes and explain differences...
+
+  - type: textarea
+    id: potential-challenges
+    attributes:
+      label: Potential Challenges
+      description: Any concerns or difficulties you anticipate in implementing this mode?
+      placeholder: Describe potential implementation challenges...
+
+  - type: textarea
+    id: maintenance-requirements
+    attributes:
+      label: Maintenance Requirements
+      description: Will this mode need regular updates due to technology changes?
+      placeholder: Describe maintenance needs and update frequency...
+
+  - type: textarea
+    id: community-value
+    attributes:
+      label: Community Value
+      description: How will this benefit the broader developer community?
+      placeholder: Explain the benefits to the developer community...
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Any documentation, articles, or resources that support the need for this chat mode
+      placeholder: Provide links or references...
+
+  - type: checkboxes
+    id: volunteering
+    attributes:
+      label: Volunteering
+      description: How would you like to contribute to this chat mode?
+      options:
+        - label: I am willing to help implement this chat mode
+        - label: I can provide domain expertise for review
+        - label: I can help test the implementation
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgently is this needed?
+      options:
+        - High - Addresses common pain point
+        - Medium - Would be helpful for specific use cases
+        - Low - Nice to have for completeness
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission Checklist
+      description: Please confirm you have completed these steps
+      options:
+        - label: I have searched existing chat modes to avoid duplication
+          required: true
+        - label: I have provided clear use cases and examples
+          required: true
+        - label: I have specified appropriate tools for the mode's functionality
+          required: true
+        - label: I have explained how this differs from existing modes
+          required: true
+        - label: I have considered the broader community value
+          required: true

@@ -1,0 +1,273 @@
+name: Update Existing Prompt File
+description: Propose updates or improvements to an existing prompt file
+title: "[UPDATE PROMPT] "
+labels: ["enhancement", "prompt-file", "update"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for proposing updates to an existing prompt file! Please fill out the form below to help us understand your proposed changes.
+
+  - type: input
+    id: existing-prompt
+    attributes:
+      label: Existing Prompt File
+      description: Which prompt file do you want to update? (Include the .prompt.md extension)
+      placeholder: e.g., create_spec.prompt.md
+    validations:
+      required: true
+
+  - type: dropdown
+    id: update-type
+    attributes:
+      label: Type of Update
+      description: What type of update are you proposing?
+      options:
+        - Bug fix - Correct existing functionality
+        - Enhancement - Add new capabilities
+        - Content update - Update instructions or task description
+        - Variable changes - Add/remove/modify input variables
+        - Output format improvement - Better output structure
+        - Performance improvement - Optimize existing functionality
+        - Documentation - Update descriptions or examples
+        - Security - Address security concerns
+        - Compatibility - Update for new versions/frameworks
+        - Mode change - Change prompt mode (chat/inline/agent)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-issue
+    attributes:
+      label: Current Issue or Limitation
+      description: What specific problem or limitation does the current prompt file have?
+      placeholder: Describe the current issue, limitation, or area for improvement...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-changes
+    attributes:
+      label: Proposed Changes
+      description: Describe the specific changes you want to make to the prompt file
+      placeholder: Detail the exact changes you propose to make...
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why are these changes needed? What benefits will they provide?
+      placeholder: Explain why these changes are important and what benefits they will provide...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: affected-areas
+    attributes:
+      label: Areas Affected
+      description: Which parts of the prompt file will be affected by your changes?
+      options:
+        - label: Prompt description/front matter
+        - label: Task description
+        - label: Instructions section
+        - label: Input variables
+        - label: Expected output format
+        - label: Examples
+        - label: Quality standards
+        - label: Error handling
+        - label: Prompt mode (chat/inline/agent)
+
+  - type: textarea
+    id: variable-changes
+    attributes:
+      label: Variable Changes (if applicable)
+      description: If you're proposing changes to input variables, describe them
+      placeholder: |
+        Current variables: ${input:Variable1}, ${input:Variable2}
+        Proposed changes:
+        - Add: ${input:NewVariable} - Description
+        - Remove: ${input:OldVariable}
+        - Modify: ${input:ExistingVariable} - Updated description
+
+  - type: dropdown
+    id: prompt-mode-change
+    attributes:
+      label: Prompt Mode Change (if applicable)
+      description: Are you proposing a change to the prompt mode?
+      options:
+        - No mode change
+        - Change to chat mode
+        - Change to inline mode
+        - Change to agent mode
+
+  - type: textarea
+    id: mode-change-justification
+    attributes:
+      label: Mode Change Justification
+      description: If proposing a mode change, explain why this specific mode is better
+      placeholder: Explain why the new mode is more appropriate for this prompt...
+
+  - type: textarea
+    id: backward-compatibility
+    attributes:
+      label: Backward Compatibility
+      description: Will your changes break existing usage? How can we minimize disruption?
+      placeholder: Describe any compatibility concerns and mitigation strategies...
+
+  - type: textarea
+    id: testing-approach
+    attributes:
+      label: Testing Approach
+      description: How should these changes be tested to ensure they work correctly?
+      placeholder: |
+        Describe how to test the proposed changes:
+        - Test scenarios
+        - Sample inputs
+        - Expected outputs
+        - Edge cases to verify
+    validations:
+      required: true
+
+  - type: textarea
+    id: before-example
+    attributes:
+      label: Before Example
+      description: Show how the current prompt behaves with a specific example
+      placeholder: |
+        **Input:**
+        Variable1: [current example]
+        Variable2: [current example]
+        
+        **Current Output:**
+        [Show current prompt output]
+    validations:
+      required: true
+
+  - type: textarea
+    id: after-example
+    attributes:
+      label: After Example
+      description: Show how the updated prompt would behave with the same example
+      placeholder: |
+        **Input:**
+        Variable1: [same example as above]
+        Variable2: [same example as above]
+        
+        **Improved Output:**
+        [Show expected improved output]
+    validations:
+      required: true
+
+  - type: textarea
+    id: edge-cases
+    attributes:
+      label: Edge Cases Considered
+      description: What edge cases or unusual scenarios have you considered?
+      placeholder: Describe edge cases and how the updated prompt should handle them...
+
+  - type: textarea
+    id: alternative-solutions
+    attributes:
+      label: Alternative Solutions Considered
+      description: What other approaches did you consider? Why is your proposed solution the best?
+      placeholder: Describe alternative approaches and why you chose this one...
+
+  - type: dropdown
+    id: impact-level
+    attributes:
+      label: Impact Level
+      description: How significant are these changes?
+      options:
+        - Low - Minor improvements with minimal risk
+        - Medium - Notable improvements with some risk
+        - High - Major changes with significant impact
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency
+      description: How urgently are these changes needed?
+      options:
+        - Critical - Fixes broken functionality
+        - High - Addresses significant pain points
+        - Medium - Notable improvement
+        - Low - Nice to have enhancement
+    validations:
+      required: true
+
+  - type: textarea
+    id: performance-impact
+    attributes:
+      label: Performance Impact
+      description: How will these changes affect prompt performance (speed, accuracy, etc.)?
+      placeholder: Describe any performance improvements or considerations...
+
+  - type: textarea
+    id: user-experience-impact
+    attributes:
+      label: User Experience Impact
+      description: How will these changes improve the user experience?
+      placeholder: Describe how users will benefit from these changes...
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-notes
+    attributes:
+      label: Implementation Notes
+      description: Any specific implementation details or considerations?
+      placeholder: Provide any technical details or implementation notes...
+
+  - type: textarea
+    id: documentation-updates
+    attributes:
+      label: Documentation Updates Required
+      description: What documentation needs to be updated alongside these changes?
+      placeholder: List any documentation that needs updating (README, examples, etc.)...
+
+  - type: textarea
+    id: related-issues
+    attributes:
+      label: Related Issues or Discussions
+      description: Link to any related issues, discussions, or pull requests
+      placeholder: Provide links to related GitHub issues, discussions, or PRs...
+
+  - type: checkboxes
+    id: volunteering
+    attributes:
+      label: Volunteering
+      description: How would you like to contribute to this update?
+      options:
+        - label: I am willing to implement these changes
+        - label: I can provide domain expertise for review
+        - label: I can help test the implementation
+        - label: I can update related documentation
+        - label: I can provide additional examples
+        - label: I can help with edge case testing
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission Checklist
+      description: Please confirm you have completed these steps
+      options:
+        - label: I have clearly identified the existing prompt file to update
+          required: true
+        - label: I have described the current issue or limitation
+          required: true
+        - label: I have provided specific, actionable proposed changes
+          required: true
+        - label: I have explained the rationale and benefits
+          required: true
+        - label: I have provided before/after examples
+          required: true
+        - label: I have considered backward compatibility
+          required: true
+        - label: I have provided a testing approach
+          required: true
+        - label: I have described the user experience impact
+          required: true

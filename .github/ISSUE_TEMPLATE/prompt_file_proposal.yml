@@ -1,0 +1,328 @@
+name: Prompt File Proposal
+description: Propose a new prompt file for the assets library
+title: "[PROMPT] "
+labels: ["enhancement", "prompt-file"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for proposing a new prompt file! Please fill out the form below to help us understand your proposal.
+
+  - type: input
+    id: prompt-name
+    attributes:
+      label: Proposed Prompt Name
+      description: What should this prompt file be called?
+      placeholder: e.g., "Generate Test Cases", "Create API Documentation", "Refactor Legacy Code"
+    validations:
+      required: true
+
+  - type: textarea
+    id: brief-description
+    attributes:
+      label: Brief Description
+      description: One-sentence description of what this prompt accomplishes
+      placeholder: This prompt helps developers...
+    validations:
+      required: true
+
+  - type: textarea
+    id: target-use-cases
+    attributes:
+      label: Target Use Cases
+      description: What specific development tasks or problems does this prompt address?
+      placeholder: Describe the specific tasks and problems this prompt solves...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: prompt-mode
+    attributes:
+      label: Prompt Mode
+      description: Which mode should this prompt use?
+      options:
+        - label: chat - For conversational interactions
+        - label: inline - For inline code suggestions
+        - label: agent - For autonomous task execution
+
+  - type: textarea
+    id: primary-task
+    attributes:
+      label: Primary Task
+      description: Clear description of the main task this prompt performs
+      placeholder: Describe the main task this prompt will accomplish...
+    validations:
+      required: true
+
+  - type: textarea
+    id: input-requirements
+    attributes:
+      label: Input Requirements
+      description: What information or context does the user need to provide?
+      placeholder: List what the user needs to provide for this prompt to work effectively...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-output
+    attributes:
+      label: Expected Output
+      description: What should the prompt generate or produce?
+      placeholder: Describe what the prompt should generate or produce...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: task-complexity
+    attributes:
+      label: Task Complexity
+      description: How complex is this task?
+      options:
+        - Simple
+        - Moderate
+        - Complex
+    validations:
+      required: true
+
+  - type: textarea
+    id: technologies-languages
+    attributes:
+      label: Technologies/Languages
+      description: What programming languages, frameworks, or tools does this prompt work with?
+      placeholder: e.g., Python, JavaScript, React, .NET, etc.
+
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: What files, structures, or setup is needed for this prompt to work effectively?
+      placeholder: Describe any prerequisites or setup requirements...
+
+  - type: textarea
+    id: variable-inputs
+    attributes:
+      label: Variable Inputs
+      description: List the variable inputs this prompt should accept
+      placeholder: |
+        1. ${input:Variable1} - Description of variable 1
+        2. ${input:Variable2} - Description of variable 2
+        3. ${input:Variable3} - Description of variable 3
+
+  - type: textarea
+    id: task-steps
+    attributes:
+      label: Task Steps
+      description: Break down the task into clear, actionable steps
+      placeholder: |
+        1. First step
+        2. Second step
+        3. Third step
+        4. Fourth step
+    validations:
+      required: true
+
+  - type: textarea
+    id: quality-standards
+    attributes:
+      label: Quality Standards
+      description: What standards, conventions, or best practices should the output follow?
+      placeholder: Describe the quality standards and best practices...
+
+  - type: textarea
+    id: error-handling
+    attributes:
+      label: Error Handling
+      description: How should the prompt handle edge cases or incomplete input?
+      placeholder: Describe how to handle edge cases and incomplete input...
+
+  - type: textarea
+    id: output-format
+    attributes:
+      label: Output Format
+      description: Specify the expected format (markdown, code, structured text, etc.)
+      placeholder: e.g., Markdown, JSON, Code blocks, Structured text, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: example-scenarios
+    attributes:
+      label: Example Scenarios
+      description: Provide 2-3 specific examples of when someone would use this prompt
+      placeholder: |
+        1. First scenario example
+        2. Second scenario example
+        3. Third scenario example
+    validations:
+      required: true
+
+  - type: textarea
+    id: sample-input
+    attributes:
+      label: Sample Input
+      description: Show what typical input would look like
+      placeholder: |
+        Variable1: [example value]
+        Variable2: [example value]
+        Context: [example context or file content]
+    validations:
+      required: true
+
+  - type: textarea
+    id: sample-output
+    attributes:
+      label: Sample Output
+      description: Show what the expected output would look like
+      placeholder: "[Example of generated output]"
+    validations:
+      required: true
+
+  - type: textarea
+    id: differentiation
+    attributes:
+      label: How is this different from existing prompts?
+      description: Explain what makes this prompt unique and why it's needed
+      placeholder: Describe what makes this prompt unique...
+    validations:
+      required: true
+
+  - type: textarea
+    id: similar-prompts
+    attributes:
+      label: Similar Tools or Prompts
+      description: Are there existing prompts that are similar? How does this one differ?
+      placeholder: Compare with existing prompts and explain differences...
+
+  - type: textarea
+    id: automation-value
+    attributes:
+      label: Automation Value
+      description: What manual process does this prompt automate or improve?
+      placeholder: Describe what manual process this automates...
+    validations:
+      required: true
+
+  - type: textarea
+    id: potential-challenges
+    attributes:
+      label: Potential Challenges
+      description: Any concerns or difficulties you anticipate in implementing this prompt?
+      placeholder: Describe potential implementation challenges...
+
+  - type: textarea
+    id: maintenance-requirements
+    attributes:
+      label: Maintenance Requirements
+      description: Will this prompt need regular updates due to technology changes?
+      placeholder: Describe maintenance needs and update frequency...
+
+  - type: textarea
+    id: edge-cases
+    attributes:
+      label: Edge Cases
+      description: What unusual scenarios or edge cases should be considered?
+      placeholder: Describe edge cases and unusual scenarios...
+
+  - type: textarea
+    id: performance-considerations
+    attributes:
+      label: Performance Considerations
+      description: Are there any performance implications (large files, complex processing, etc.)?
+      placeholder: Describe any performance considerations...
+
+  - type: textarea
+    id: target-audience
+    attributes:
+      label: Target Audience
+      description: Who would benefit most from this prompt?
+      placeholder: Describe the target audience...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency-of-use
+    attributes:
+      label: Frequency of Use
+      description: How often would developers typically use this prompt?
+      options:
+        - Daily
+        - Weekly
+        - Monthly
+        - Occasionally
+        - Rarely
+    validations:
+      required: true
+
+  - type: textarea
+    id: learning-value
+    attributes:
+      label: Learning Value
+      description: Does this prompt help developers learn or understand concepts better?
+      placeholder: Describe the learning value...
+
+  - type: textarea
+    id: time-savings
+    attributes:
+      label: Time Savings
+      description: How much time could this prompt save compared to manual implementation?
+      placeholder: Estimate time savings (e.g., "30 minutes", "2 hours", etc.)...
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Any documentation, articles, or resources that support the need for this prompt
+      placeholder: Provide links or references...
+
+  - type: textarea
+    id: related-standards
+    attributes:
+      label: Related Standards
+      description: Any industry standards, style guides, or conventions this prompt should follow
+      placeholder: List related standards or style guides...
+
+  - type: checkboxes
+    id: volunteering
+    attributes:
+      label: Volunteering
+      description: How would you like to contribute to this prompt?
+      options:
+        - label: I am willing to help implement this prompt
+        - label: I can provide domain expertise for review
+        - label: I can help test the implementation
+        - label: I can provide additional examples
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgently is this needed?
+      options:
+        - High - Addresses common pain point
+        - Medium - Would be helpful for specific use cases
+        - Low - Nice to have for completeness
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission Checklist
+      description: Please confirm you have completed these steps
+      options:
+        - label: I have searched existing prompt files to avoid duplication
+          required: true
+        - label: I have provided clear task description and expected outcomes
+          required: true
+        - label: I have specified appropriate input variables
+          required: true
+        - label: I have included realistic examples
+          required: true
+        - label: I have explained how this differs from existing prompts
+          required: true
+        - label: I have considered the broader community value
+          required: true
+        - label: I have specified the appropriate prompt mode (chat/inline/agent)
+          required: true
