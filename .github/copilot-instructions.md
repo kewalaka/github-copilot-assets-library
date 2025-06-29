@@ -4,14 +4,15 @@ This is a GitHub Copilot Assets Library that provides customization assets inclu
 
 - **Documentation**: Use README.md as the primary source - contains comprehensive asset descriptions
 - **No build/test commands**: This is a documentation/asset library with no compiled code
-- **File validation**: Ensure Markdown syntax is valid for `.chatmode.md` and `.prompt.md` files
+- **File validation**: Ensure Markdown syntax is valid for `.chatmode.md`, `.prompt.md` and `.instruction.md` files
 
 ## Repository Architecture
 
 ### Major Components
-- `.github/copilot-instructions.md` - Repository-level Copilot instructions
-- `.github/prompts/` - Reusable prompt files for common tasks
-- `.github/chatmodes/` - Custom chat modes with specialized instructions and tools
+- `.github/copilot-instructions.md` - Repository-level Copilot instructions (n)
+- `/prompts/` - Reusable prompt files for common tasks
+- `/chatmodes/` - Custom chat modes with specialized instructions and tools
+- `/instructions/` - Custom instruction files for Copilot
 - `.vscode/mcp.json` - Model Context Protocol server configurations
 - `.devcontainer/` - Development container for standardized environment
 
