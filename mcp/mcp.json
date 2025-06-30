@@ -4,16 +4,6 @@
             "type": "http",
             "url": "https://learn.microsoft.com/api/mcp"
         },
-        "filesystem": {
-            "command": "npx",
-            "args": [
-                "-y",
-                "@modelcontextprotocol/server-filesystem",
-                "${input:baseDirectory}"
-            ],
-            "type": "stdio",
-            "env": {}
-        },
         "playwright": {
             "command": "npx",
             "args": [
@@ -44,11 +34,6 @@
         }
     },
     "inputs": [
-        {
-            "id": "baseDirectory",
-            "type": "promptString",
-            "description": "Enter the base directory path for the server"
-        },
         {
             "id": "giphy_api_key",
             "type": "promptString",
