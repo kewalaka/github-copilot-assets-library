@@ -6,19 +6,19 @@ This folder contains example prompt files (experimental) for GitHub Copilot. For
 
 A list of prompt files available in this repository:
 
-| File Name | Description | Parameters |
-|-----------|-------------|------------|
-| [create_github_issues_for_unmet_spec_requirements.prompt.md](create_github_issues_for_unmet_spec_requirements.prompt.md) | Create GitHub issues for unmet specification requirements | `${input:specFile}` |
-| [create_github_issue_feature_from_spec.prompt.md](create_github_issue_feature_from_spec.prompt.md) | Create a GitHub issue for a new feature from specification | `${input:specFile}` |
-| [create_plan.prompt.md](create_plan.prompt.md) | Create a project plan from requirements | `${input:PlanPurpose}` |
-| [create_spec.prompt.md](create_spec.prompt.md) | Create a technical specification document | `${input:SpecPurpose}` |
-| [dotnet_best_practices.prompt.md](dotnet_best_practices.prompt.md) | Review .NET code for best practices |  |
-| [dotnet_design_pattern_review.prompt.md](dotnet_design_pattern_review.prompt.md) | Review .NET code for design patterns | `${selection}` |
-| [update_avm_modules_in_bicep.prompt.md](update_avm_modules_in_bicep.prompt.md) | Update Azure Verified Modules to latest versions in Bicep files | `${file}` |
-| [update_llms.prompt.md](update_llms.prompt.md) | Update large language model references |   |
-| [update_markdown_file_index.prompt.md](update_markdown_file_index.prompt.md) | Update a markdown file section with an index/table of files from a specified folder | `${file}`, `${input:folder}`, `${input:pattern}` |
-| [update_plan.prompt.md](update_plan.prompt.md) | Update an existing project plan | `${input:PlanPurpose}` |
-| [update_spec.prompt.md](update_spec.prompt.md) | Update an existing technical specification | `${input:SpecPurpose}` |
+| Name | Example File | Usage |
+|------|--------------|-------|
+| Create GitHub Issues for Unmet Requirements | [create_github_issues_for_unmet_spec_requirements.prompt.md](create_github_issues_for_unmet_spec_requirements.prompt.md) | Create GitHub issues for requirements not met in specifications. |
+| Create GitHub Issue from Spec | [create_github_issue_feature_from_spec.prompt.md](create_github_issue_feature_from_spec.prompt.md) | Generate GitHub issues for new features based on specifications. |
+| Create Plan | [create_plan.prompt.md](create_plan.prompt.md) | Create a new implementation plan file for features, refactoring, upgrades, or architecture, optimized for Generative AI. |
+| Create Specification | [create_spec.prompt.md](create_spec.prompt.md) | Create a new specification file for the solution, optimized for Generative AI consumption. |
+| .NET Best Practices Review | [dotnet_best_practices.prompt.md](dotnet_best_practices.prompt.md) | Review .NET code for best practices and improvements. |
+| .NET Design Pattern Review | [dotnet_design_pattern_review.prompt.md](dotnet_design_pattern_review.prompt.md) | Analyze .NET code for design pattern usage and recommendations. |
+| Update AVM Modules in Bicep | [update_avm_modules_in_bicep.prompt.md](update_avm_modules_in_bicep.prompt.md) | Update Azure Verified Modules in Bicep templates. |
+| Update LLMs | [update_llms.prompt.md](update_llms.prompt.md) | Update Large Language Model configurations and settings. |
+| Update Markdown File Index | [update_markdown_file_index.prompt.md](update_markdown_file_index.prompt.md) | Update a markdown file section with an index/table of files from a specified folder. |
+| Update Plan | [update_plan.prompt.md](update_plan.prompt.md) | Update an existing implementation plan file with new or updated requirements to provide new features, refactoring existing code or upgrading packages, design, architecture or infrastructure. |
+| Update Specification | [update_spec.prompt.md](update_spec.prompt.md) | Update an existing specification file for the solution, optimized for Generative AI consumption based on new requirements or updates to any existing code. |
 
 ## Usage
 

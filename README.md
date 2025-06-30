@@ -127,7 +127,7 @@ Chat mode examples are found in the [`chatmodes/`](chatmodes/) folder:
 | Demonstrate Understanding | [demonstrate_understanding.chatmode.md](chatmodes/demonstrate_understanding.chatmode.md) | Validate user understanding of code, design patterns, and implementation details through guided questioning. |
 | Expert .NET Software Engineer | [expert_dotnet_software_engineer.chatmode.md](chatmodes/expert_dotnet_software_engineer.chatmode.md) | Provide expert .NET software engineering guidance using modern software design patterns. |
 | Expert React Frontend Engineer | [expert_react_frontend_engineer.chatmode.md](chatmodes/expert_react_frontend_engineer.chatmode.md) | Provide expert React frontend engineering guidance using modern TypeScript and design patterns. |
-| Idea Generator | [idea_generator.chatmode.md](chatmodes/idea_generator.chatmode.md) | Brainstorm and develop new application ideas through fun, interactive questioning until ready for specification creation. |
+| Simple App Idea Generator | [simple_app_idea_generator.chatmode.md](chatmodes/simple_app_idea_generator.chatmode.md) | Brainstorm and develop new application ideas through fun, interactive questioning until ready for specification creation. |
 | Janitor | [janitor.chatmode.md](chatmodes/janitor.chatmode.md) | Perform janitorial tasks on any codebase including cleanup, simplification, and tech debt remediation. |
 | Mentor | [mentor.chatmode.md](chatmodes/mentor.chatmode.md) | Help mentor the engineer by providing guidance and support. |
 | Plan | [plan.chatmode.md](chatmodes/plan.chatmode.md) | Generate an implementation plan for new features or refactoring existing code. |
