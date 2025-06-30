@@ -47,9 +47,9 @@ This repository provides the following types of assets:
 
 Examples for Copilot Instructions can be found in subfolders in the [`copilot-instructions/`](copilot-instructions/) folder.
 
-| Example File | Usage |
-|--------------|-------|
-| [copilot-instructions/azure_developer_solution_accelerator/copilot-instructions.md](copilot-instructions/azure_developer_solution_accelerator/copilot-instructions.md) | Azure Developer CLI (AZD) solution accelerator for deploying Azure resources using modern Infrastructure as Code practices. |
+| Name | Example File | Usage |
+|------|--------------|-------|
+| Azure Developer Solution Accelerator | [copilot-instructions/azure_developer_solution_accelerator/copilot-instructions.md](copilot-instructions/azure_developer_solution_accelerator/copilot-instructions.md) | Azure Developer CLI (AZD) solution accelerator for deploying Azure resources using modern Infrastructure as Code practices. |
 
 > [!IMPORTANT]
 > Copilot Instructions only apply to Chat modes (Ask, Edit, Agent or custom modes), they do not apply to Copilot auto-completion in the editor.
@@ -72,10 +72,10 @@ Custom instruction files with specific language and framework guidance can be fo
 > [!IMPORTANT]
 > Copilot Instructions only apply to Chat modes (Ask, Edit, Agent or custom modes), they do not apply to Copilot auto-completion in the editor.
 
-| Example File | Pattern | Usage |
-|--------------|---------|-------|
-| [csharp-14-best-practices.instructions.md](instructions/csharp-14-best-practices.instructions.md) | `**/*.cs` | C# 14 best practices and formatting guidelines for AI code generation |
-| [csharp-best-practices.instructions.md](instructions/csharp-best-practices.instructions.md) | `**/*.cs` | C# best practices and formatting guidelines for AI code generation (all versions) |
+| Name | Example File | Pattern | Usage |
+|------|--------------|---------|-------|
+| C# 14 Best Practices | [csharp-14-best-practices.instructions.md](instructions/csharp-14-best-practices.instructions.md) | `**/*.cs` | C# 14 best practices and formatting guidelines for AI code generation |
+| C# Best Practices (All Versions) | [csharp-best-practices.instructions.md](instructions/csharp-best-practices.instructions.md) | `**/*.cs` | C# best practices and formatting guidelines for AI code generation (all versions) |
 
 #### Custom Instruction Files in workspace usage
 
@@ -89,19 +89,19 @@ This file will automatically apply to all contributors when they use GitHub Copi
 
 Prompt file examples are found in the [`prompts/`](prompts/) folder.
 
-| Example File | Usage |
-|--------------|-------|
-| [create_github_issue_feature_from_spec.prompt.md](prompts/create_github_issue_feature_from_spec.prompt.md) | Generate GitHub issues for new features based on specifications. |
-| [create_github_issues_for_unmet_spec_requirements.prompt.md](prompts/create_github_issues_for_unmet_spec_requirements.prompt.md) | Create GitHub issues for requirements not met in specifications. |
-| [create_plan.prompt.md](prompts/create_plan.prompt.md) | Create a new implementation plan file for features, refactoring, upgrades, or architecture, optimized for Generative AI. |
-| [create_spec.prompt.md](prompts/create_spec.prompt.md) | Create a new specification file for the solution, optimized for Generative AI consumption. |
-| [dotnet_best_practices.prompt.md](prompts/dotnet_best_practices.prompt.md) | Review .NET code for best practices and improvements. |
-| [dotnet_design_pattern_review.prompt.md](prompts/dotnet_design_pattern_review.prompt.md) | Analyze .NET code for design pattern usage and recommendations. |
-| [update_avm_modules_in_bicep.prompt.md](prompts/update_avm_modules_in_bicep.prompt.md) | Update Azure Verified Modules in Bicep templates. |
-| [update_llms.prompt.md](prompts/update_llms.prompt.md) | Update Large Language Model configurations and settings. |
-| [update_markdown_file_index.prompt.md](prompts/update_markdown_file_index.prompt.md) | Update a markdown file section with an index/table of files from a specified folder. |
-| [update_plan.prompt.md](prompts/update_plan.prompt.md) | Update an existing implementation plan file with new or updated requirements to provide new features, refactoring existing code or upgrading packages, design, architecture or infrastructure. |
-| [update_spec.prompt.md](prompts/update_spec.prompt.md) | Update an existing specification file for the solution, optimized for Generative AI consumption based on new requirements or updates to any existing code. |
+| Name | Example File | Usage |
+|------|--------------|-------|
+| Create GitHub Issue from Spec | [create_github_issue_feature_from_spec.prompt.md](prompts/create_github_issue_feature_from_spec.prompt.md) | Generate GitHub issues for new features based on specifications. |
+| Create GitHub Issues for Unmet Requirements | [create_github_issues_for_unmet_spec_requirements.prompt.md](prompts/create_github_issues_for_unmet_spec_requirements.prompt.md) | Create GitHub issues for requirements not met in specifications. |
+| Create Plan | [create_plan.prompt.md](prompts/create_plan.prompt.md) | Create a new implementation plan file for features, refactoring, upgrades, or architecture, optimized for Generative AI. |
+| Create Specification | [create_spec.prompt.md](prompts/create_spec.prompt.md) | Create a new specification file for the solution, optimized for Generative AI consumption. |
+| .NET Best Practices Review | [dotnet_best_practices.prompt.md](prompts/dotnet_best_practices.prompt.md) | Review .NET code for best practices and improvements. |
+| .NET Design Pattern Review | [dotnet_design_pattern_review.prompt.md](prompts/dotnet_design_pattern_review.prompt.md) | Analyze .NET code for design pattern usage and recommendations. |
+| Update AVM Modules in Bicep | [update_avm_modules_in_bicep.prompt.md](prompts/update_avm_modules_in_bicep.prompt.md) | Update Azure Verified Modules in Bicep templates. |
+| Update LLMs | [update_llms.prompt.md](prompts/update_llms.prompt.md) | Update Large Language Model configurations and settings. |
+| Update Markdown File Index | [update_markdown_file_index.prompt.md](prompts/update_markdown_file_index.prompt.md) | Update a markdown file section with an index/table of files from a specified folder. |
+| Update Plan | [update_plan.prompt.md](prompts/update_plan.prompt.md) | Update an existing implementation plan file with new or updated requirements to provide new features, refactoring existing code or upgrading packages, design, architecture or infrastructure. |
+| Update Specification | [update_spec.prompt.md](prompts/update_spec.prompt.md) | Update an existing specification file for the solution, optimized for Generative AI consumption based on new requirements or updates to any existing code. |
 
 #### Prompt Files in workspace usage
 
@@ -118,23 +118,23 @@ This will run the prompt file in the chat and generate the output based on the i
 
 Chat mode examples are found in the [`chatmodes/`](chatmodes/) folder:
 
-| Example File | Usage |
-|--------------|-------|
-| [azure_verified_modules_bicep.chatmode.md](chatmodes/azure_verified_modules_bicep.chatmode.md) | Create, update, or review Azure IaC in Bicep using Azure Verified Modules (AVM). |
-| [azure_verified_modules_terraform.chatmode.md](chatmodes/azure_verified_modules_terraform.chatmode.md) | Create, update, or review Azure IaC in Terraform using Azure Verified Modules (AVM). |
-| [critical_thinking.chatmode.md](chatmodes/critical_thinking.chatmode.md) | Challenge assumptions and encourage critical thinking to ensure the best possible solution and outcomes. |
-| [csharp_dotnet_janitor.chatmode.md](chatmodes/csharp_dotnet_janitor.chatmode.md) | Perform janitorial tasks on C#/.NET code including cleanup, modernization, and tech debt remediation. |
-| [demonstrate_understanding.chatmode.md](chatmodes/demonstrate_understanding.chatmode.md) | Validate user understanding of code, design patterns, and implementation details through guided questioning. |
-| [expert_dotnet_software_engineer.chatmode.md](chatmodes/expert_dotnet_software_engineer.chatmode.md) | Provide expert .NET software engineering guidance using modern software design patterns. |
-| [expert_react_frontend_engineer.chatmode.md](chatmodes/expert_react_frontend_engineer.chatmode.md) | Provide expert React frontend engineering guidance using modern TypeScript and design patterns. |
-| [idea_generator.chatmode.md](chatmodes/idea_generator.chatmode.md) | Brainstorm and develop new application ideas through fun, interactive questioning until ready for specification creation. |
-| [janitor.chatmode.md](chatmodes/janitor.chatmode.md) | Perform janitorial tasks on any codebase including cleanup, simplification, and tech debt remediation. |
-| [mentor.chatmode.md](chatmodes/mentor.chatmode.md) | Help mentor the engineer by providing guidance and support. |
-| [plan.chatmode.md](chatmodes/plan.chatmode.md) | Generate an implementation plan for new features or refactoring existing code. |
-| [semantic_kernel_dotnet.chatmode.md](chatmodes/semantic_kernel_dotnet.chatmode.md) | Create, update, refactor, explain or work with code using the .NET version of Semantic Kernel. |
-| [semantic_kernel_python.chatmode.md](chatmodes/semantic_kernel_python.chatmode.md) | Create, update, refactor, explain or work with code using the Python version of Semantic Kernel. |
-| [specification.chatmode.md](chatmodes/specification.chatmode.md) | Generate or update specification documents for new or existing functionality. |
-| [tech_debt_remediation_plan.chatmode.md](chatmodes/tech_debt_remediation_plan.chatmode.md) | Generate technical debt remediation plans for code, tests, and documentation. |
+| Name | Example File | Usage |
+|------|--------------|-------|
+| Azure Verified Modules (Bicep) | [azure_verified_modules_bicep.chatmode.md](chatmodes/azure_verified_modules_bicep.chatmode.md) | Create, update, or review Azure IaC in Bicep using Azure Verified Modules (AVM). |
+| Azure Verified Modules (Terraform) | [azure_verified_modules_terraform.chatmode.md](chatmodes/azure_verified_modules_terraform.chatmode.md) | Create, update, or review Azure IaC in Terraform using Azure Verified Modules (AVM). |
+| Critical Thinking | [critical_thinking.chatmode.md](chatmodes/critical_thinking.chatmode.md) | Challenge assumptions and encourage critical thinking to ensure the best possible solution and outcomes. |
+| C#/.NET Janitor | [csharp_dotnet_janitor.chatmode.md](chatmodes/csharp_dotnet_janitor.chatmode.md) | Perform janitorial tasks on C#/.NET code including cleanup, modernization, and tech debt remediation. |
+| Demonstrate Understanding | [demonstrate_understanding.chatmode.md](chatmodes/demonstrate_understanding.chatmode.md) | Validate user understanding of code, design patterns, and implementation details through guided questioning. |
+| Expert .NET Software Engineer | [expert_dotnet_software_engineer.chatmode.md](chatmodes/expert_dotnet_software_engineer.chatmode.md) | Provide expert .NET software engineering guidance using modern software design patterns. |
+| Expert React Frontend Engineer | [expert_react_frontend_engineer.chatmode.md](chatmodes/expert_react_frontend_engineer.chatmode.md) | Provide expert React frontend engineering guidance using modern TypeScript and design patterns. |
+| Idea Generator | [idea_generator.chatmode.md](chatmodes/idea_generator.chatmode.md) | Brainstorm and develop new application ideas through fun, interactive questioning until ready for specification creation. |
+| Janitor | [janitor.chatmode.md](chatmodes/janitor.chatmode.md) | Perform janitorial tasks on any codebase including cleanup, simplification, and tech debt remediation. |
+| Mentor | [mentor.chatmode.md](chatmodes/mentor.chatmode.md) | Help mentor the engineer by providing guidance and support. |
+| Plan | [plan.chatmode.md](chatmodes/plan.chatmode.md) | Generate an implementation plan for new features or refactoring existing code. |
+| Semantic Kernel (.NET) | [semantic_kernel_dotnet.chatmode.md](chatmodes/semantic_kernel_dotnet.chatmode.md) | Create, update, refactor, explain or work with code using the .NET version of Semantic Kernel. |
+| Semantic Kernel (Python) | [semantic_kernel_python.chatmode.md](chatmodes/semantic_kernel_python.chatmode.md) | Create, update, refactor, explain or work with code using the Python version of Semantic Kernel. |
+| Specification | [specification.chatmode.md](chatmodes/specification.chatmode.md) | Generate or update specification documents for new or existing functionality. |
+| Tech Debt Remediation Plan | [tech_debt_remediation_plan.chatmode.md](chatmodes/tech_debt_remediation_plan.chatmode.md) | Generate technical debt remediation plans for code, tests, and documentation. |
 
 #### Custom Chat Modes in workspace usage
 
