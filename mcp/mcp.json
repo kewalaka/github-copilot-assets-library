@@ -24,14 +24,8 @@
             "env": {}
         },
         "github": {
-            "command": "npx",
-            "args": [
-                "-y",
-                "@modelcontextprotocol/server-github"
-            ],
-            "env": {
-                "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}"
-            }
+            "type": "http",
+            "url": "https://api.githubcopilot.com/mcp/"
         },
         "giphy": {
             "command": "npx",
@@ -54,12 +48,6 @@
             "id": "baseDirectory",
             "type": "promptString",
             "description": "Enter the base directory path for the server"
-        },
-        {
-            "id": "github_token",
-            "type": "promptString",
-            "description": "GitHub Personal Access Token",
-            "password": true
         },
         {
             "id": "giphy_api_key",
