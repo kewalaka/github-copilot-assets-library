@@ -120,17 +120,19 @@ Chat mode examples are found in the [`chatmodes/`](chatmodes/) folder:
 
 | Example File | Usage |
 |--------------|-------|
-| [azure_verified_modules_bicep.chatmode.md](chatmodes/azure_verified_modules_bicep.chatmode.md) | Azure Bicep: Guidance and tools for Azure Verified Modules in Bicep templates. |
-| [azure_verified_modules_terraform.chatmode.md](chatmodes/azure_verified_modules_terraform.chatmode.md) | Azure Terraform: Guidance and tools for Azure Verified Modules in Terraform configurations. |
-| [critical_thinking.chatmode.md](chatmodes/critical_thinking.chatmode.md) | Critical Thinking: Challenge assumptions and encourage critical thinking to ensure the best possible solution and outcomes. |
-| [expert_dotnet_software_engineer.chatmode.md](chatmodes/expert_dotnet_software_engineer.chatmode.md) | .NET Expert: Advanced .NET software engineering support and best practices. |
-| [expert_react_frontend_engineer.chatmode.md](chatmodes/expert_react_frontend_engineer.chatmode.md) | React Expert: Advanced React frontend development guidance. |
-| [janitor.chatmode.md](chatmodes/janitor.chatmode.md) | Code Janitor: Automated code cleanup, refactoring, and maintenance. |
-| [mentor.chatmode.md](chatmodes/mentor.chatmode.md) | Mentor: Guidance, support, and learning through questions and hints. |
-| [plan.chatmode.md](chatmodes/plan.chatmode.md) | Planning: Generates detailed implementation plans for new features or refactoring. |
-| [semantic_kernel_dotnet.chatmode.md](chatmodes/semantic_kernel_dotnet.chatmode.md) | Semantic Kernel (.NET): Create, update, refactor, explain or work with code using the .NET version of Semantic Kernel. |
-| [semantic_kernel_python.chatmode.md](chatmodes/semantic_kernel_python.chatmode.md) | Semantic Kernel (Python): Create, update, refactor, explain or work with code using the Python version of Semantic Kernel. |
-| [specification.chatmode.md](chatmodes/specification.chatmode.md) | Specification: Technical specification and documentation authoring mode. |
+| [azure_verified_modules_bicep.chatmode.md](chatmodes/azure_verified_modules_bicep.chatmode.md) | Create, update, or review Azure IaC in Bicep using Azure Verified Modules (AVM). |
+| [azure_verified_modules_terraform.chatmode.md](chatmodes/azure_verified_modules_terraform.chatmode.md) | Create, update, or review Azure IaC in Terraform using Azure Verified Modules (AVM). |
+| [critical_thinking.chatmode.md](chatmodes/critical_thinking.chatmode.md) | Challenge assumptions and encourage critical thinking to ensure the best possible solution and outcomes. |
+| [csharp_dotnet_janitor.chatmode.md](chatmodes/csharp_dotnet_janitor.chatmode.md) | Perform janitorial tasks on C#/.NET code including cleanup, modernization, and tech debt remediation. |
+| [expert_dotnet_software_engineer.chatmode.md](chatmodes/expert_dotnet_software_engineer.chatmode.md) | Provide expert .NET software engineering guidance using modern software design patterns. |
+| [expert_react_frontend_engineer.chatmode.md](chatmodes/expert_react_frontend_engineer.chatmode.md) | Provide expert React frontend engineering guidance using modern TypeScript and design patterns. |
+| [janitor.chatmode.md](chatmodes/janitor.chatmode.md) | Perform janitorial tasks on any codebase including cleanup, simplification, and tech debt remediation. |
+| [mentor.chatmode.md](chatmodes/mentor.chatmode.md) | Help mentor the engineer by providing guidance and support. |
+| [plan.chatmode.md](chatmodes/plan.chatmode.md) | Generate an implementation plan for new features or refactoring existing code. |
+| [semantic_kernel_dotnet.chatmode.md](chatmodes/semantic_kernel_dotnet.chatmode.md) | Create, update, refactor, explain or work with code using the .NET version of Semantic Kernel. |
+| [semantic_kernel_python.chatmode.md](chatmodes/semantic_kernel_python.chatmode.md) | Create, update, refactor, explain or work with code using the Python version of Semantic Kernel. |
+| [specification.chatmode.md](chatmodes/specification.chatmode.md) | Generate or update specification documents for new or existing functionality. |
+| [tech_debt_remediation_plan.chatmode.md](chatmodes/tech_debt_remediation_plan.chatmode.md) | Generate technical debt remediation plans for code, tests, and documentation. |
 
 #### Custom Chat Modes in workspace usage
 
