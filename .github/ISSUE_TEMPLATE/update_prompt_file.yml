@@ -13,7 +13,7 @@ body:
     attributes:
       label: Existing Prompt File
       description: Which prompt file do you want to update? (Include the .prompt.md extension)
-      placeholder: e.g., create_spec.prompt.md
+      placeholder: e.g., create_specification.prompt.md
     validations:
       required: true
 

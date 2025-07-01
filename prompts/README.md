@@ -11,7 +11,7 @@ A list of prompt files available in this repository:
 | Create GitHub Issues for Unmet Requirements | [create_github_issues_for_unmet_spec_requirements.prompt.md](create_github_issues_for_unmet_spec_requirements.prompt.md) | Create GitHub issues for requirements not met in specifications. |
 | Create GitHub Issue from Spec | [create_github_issue_feature_from_spec.prompt.md](create_github_issue_feature_from_spec.prompt.md) | Generate GitHub issues for new features based on specifications. |
 | Create Plan | [create_plan.prompt.md](create_plan.prompt.md) | Create a new implementation plan file for features, refactoring, upgrades, or architecture, optimized for Generative AI. |
-| Create Specification | [create_spec.prompt.md](create_spec.prompt.md) | Create a new specification file for the solution, optimized for Generative AI consumption. |
+| Create Specification | [create_specification.prompt.md](create_specification.prompt.md) | Create a new specification file for the solution, optimized for Generative AI consumption. |
 | .NET Best Practices Review | [dotnet_best_practices.prompt.md](dotnet_best_practices.prompt.md) | Review .NET code for best practices and improvements. |
 | .NET Design Pattern Review | [dotnet_design_pattern_review.prompt.md](dotnet_design_pattern_review.prompt.md) | Analyze .NET code for design pattern usage and recommendations. |
 | Update AVM Modules in Bicep | [update_avm_modules_in_bicep.prompt.md](update_avm_modules_in_bicep.prompt.md) | Update Azure Verified Modules in Bicep templates. |
