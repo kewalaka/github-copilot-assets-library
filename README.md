@@ -132,15 +132,10 @@ Chat mode examples are found in the [`chatmodes/`](chatmodes/) folder:
 | Janitor | [janitor.chatmode.md](chatmodes/janitor.chatmode.md) | Perform janitorial tasks on any codebase including cleanup, simplification, and tech debt remediation. |
 | Mentor | [mentor.chatmode.md](chatmodes/mentor.chatmode.md) | Help mentor the engineer by providing guidance and support. |
 | Plan | [plan.chatmode.md](chatmodes/plan.chatmode.md) | Generate an implementation plan for new features or refactoring existing code. |
+| Principal Software Engineer | [principal_software_engineer.chatmode.md](chatmodes/principal_software_engineer.chatmode.md) | Provide principal-level software engineering guidance with focus on engineering excellence, technical leadership, and pragmatic implementation. |
 | Semantic Kernel (.NET) | [semantic_kernel_dotnet.chatmode.md](chatmodes/semantic_kernel_dotnet.chatmode.md) | Create, update, refactor, explain or work with code using the .NET version of Semantic Kernel. |
 | Semantic Kernel (Python) | [semantic_kernel_python.chatmode.md](chatmodes/semantic_kernel_python.chatmode.md) | Create, update, refactor, explain or work with code using the Python version of Semantic Kernel. |
 | Simple App Idea Generator | [simple_app_idea_generator.chatmode.md](chatmodes/simple_app_idea_generator.chatmode.md) | Brainstorm and develop new application ideas through fun, interactive questioning until ready for specification creation. |
-| Specification | [specification.chatmode.md](chatmodes/specification.chatmode.md) | Generate or update specification documents for new or existing functionality. |
-| Tech Debt Remediation Plan | [tech_debt_remediation_plan.chatmode.md](chatmodes/tech_debt_remediation_plan.chatmode.md) | Generate technical debt remediation plans for code, tests, and documentation. |
-| Mentor | [mentor.chatmode.md](chatmodes/mentor.chatmode.md) | Help mentor the engineer by providing guidance and support. |
-| Plan | [plan.chatmode.md](chatmodes/plan.chatmode.md) | Generate an implementation plan for new features or refactoring existing code. |
-| Semantic Kernel (.NET) | [semantic_kernel_dotnet.chatmode.md](chatmodes/semantic_kernel_dotnet.chatmode.md) | Create, update, refactor, explain or work with code using the .NET version of Semantic Kernel. |
-| Semantic Kernel (Python) | [semantic_kernel_python.chatmode.md](chatmodes/semantic_kernel_python.chatmode.md) | Create, update, refactor, explain or work with code using the Python version of Semantic Kernel. |
 | Specification | [specification.chatmode.md](chatmodes/specification.chatmode.md) | Generate or update specification documents for new or existing functionality. |
 | Tech Debt Remediation Plan | [tech_debt_remediation_plan.chatmode.md](chatmodes/tech_debt_remediation_plan.chatmode.md) | Generate technical debt remediation plans for code, tests, and documentation. |
 
