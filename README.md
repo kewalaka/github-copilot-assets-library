@@ -101,7 +101,7 @@ Prompt file examples are found in the [`prompts/`](prompts/) folder.
 | Update LLMs | [update_llms.prompt.md](prompts/update_llms.prompt.md) | Update Large Language Model configurations and settings. |
 | Update Markdown File Index | [update_markdown_file_index.prompt.md](prompts/update_markdown_file_index.prompt.md) | Update a markdown file section with an index/table of files from a specified folder. |
 | Update Plan | [update_plan.prompt.md](prompts/update_plan.prompt.md) | Update an existing implementation plan file with new or updated requirements to provide new features, refactoring existing code or upgrading packages, design, architecture or infrastructure. |
-| Update Specification | [update_spec.prompt.md](prompts/update_spec.prompt.md) | Update an existing specification file for the solution, optimized for Generative AI consumption based on new requirements or updates to any existing code. |
+| Update Specification | [update_specification.prompt.md](prompts/update_specification.prompt.md) | Update an existing specification file for the solution, optimized for Generative AI consumption based on new requirements or updates to any existing code. |
 
 #### Prompt Files in workspace usage
 
