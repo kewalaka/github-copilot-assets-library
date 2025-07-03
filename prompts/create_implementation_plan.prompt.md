@@ -3,7 +3,7 @@ mode: 'agent'
 description: Create a new implementation plan file for new features, refactoring existing code or upgrading packages, design, architecture or infrastructure.
 tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'githubRepo', 'openSimpleBrowser', 'problems', 'runTasks', 'search', 'searchResults', 'terminalLastCommand', 'terminalSelection', 'testFailure', 'usages', 'vscodeAPI']
 ---
-## AI Implementation Plan Update Prompt
+## Implementation Plan Update Prompt
 
 **PRIMARY DIRECTIVE**: Your goal is to create a new implementation plan file for `${input:PlanPurpose}`. Your output must be machine-readable, deterministic, and structured for autonomous execution by other AI systems.
 
