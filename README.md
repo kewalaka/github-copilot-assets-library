@@ -91,16 +91,16 @@ Prompt file examples are found in the [`prompts/`](prompts/) folder.
 
 | Name | Example File | Usage |
 |------|--------------|-------|
-| Create GitHub Issue from Spec | [create_github_issue_feature_from_spec.prompt.md](prompts/create_github_issue_feature_from_spec.prompt.md) | Generate GitHub issues for new features based on specifications. |
-| Create GitHub Issues for Unmet Requirements | [create_github_issues_for_unmet_spec_requirements.prompt.md](prompts/create_github_issues_for_unmet_spec_requirements.prompt.md) | Create GitHub issues for requirements not met in specifications. |
-| Create Plan | [create_plan.prompt.md](prompts/create_plan.prompt.md) | Create a new implementation plan file for features, refactoring, upgrades, or architecture, optimized for Generative AI. |
+| Create GitHub Issue from Spec | [create_github_issue_feature_from_spec.prompt.md](prompts/create_github_issue_feature_from_spec.prompt.md) | Create a GitHub Issue for a feature request using the GitHub Issue template feature_request.yml from a specification file. |
+| Create GitHub Issues for Unmet Requirements | [create_github_issues_for_unmet_spec_requirements.prompt.md](prompts/create_github_issues_for_unmet_spec_requirements.prompt.md) | Create GitHub Issues for each requirement in a specification file that is not already implemented in the codebase using the GitHub Issue template feature_request.yml. |
+| Create Implementation Plan | [create_implementation_plan.prompt.md](prompts/create_implementation_plan.prompt.md) | Create a new implementation plan file for new features, refactoring existing code or upgrading packages, design, architecture or infrastructure. |
 | Create Specification | [create_specification.prompt.md](prompts/create_specification.prompt.md) | Create a new specification file for the solution, optimized for Generative AI consumption. |
-| .NET Best Practices Review | [dotnet_best_practices.prompt.md](prompts/dotnet_best_practices.prompt.md) | Review .NET code for best practices and improvements. |
-| .NET Design Pattern Review | [dotnet_design_pattern_review.prompt.md](prompts/dotnet_design_pattern_review.prompt.md) | Analyze .NET code for design pattern usage and recommendations. |
-| Update AVM Modules in Bicep | [update_avm_modules_in_bicep.prompt.md](prompts/update_avm_modules_in_bicep.prompt.md) | Update Azure Verified Modules in Bicep templates. |
-| Update LLMs | [update_llms.prompt.md](prompts/update_llms.prompt.md) | Update Large Language Model configurations and settings. |
+| .NET Best Practices Review | [dotnet_best_practices.prompt.md](prompts/dotnet_best_practices.prompt.md) | Ensure .NET/C# code meets the best practices specific to the solution/project including documentation, structure, and design patterns. |
+| .NET Design Pattern Review | [dotnet_design_pattern_review.prompt.md](prompts/dotnet_design_pattern_review.prompt.md) | Review the C#/.NET code for design pattern implementation and suggest improvements for the solution/project. |
+| Update AVM Modules in Bicep | [update_avm_modules_in_bicep.prompt.md](prompts/update_avm_modules_in_bicep.prompt.md) | Update Azure Verified Modules to latest versions in Bicep files. |
+| Update Implementation Plan | [update_implementation_plan.prompt.md](prompts/update_implementation_plan.prompt.md) | Update an existing implementation plan file with new or update requirements to provide new features, refactoring existing code or upgrading packages, design, architecture or infrastructure. |
+| Update LLMs | [update_llms.prompt.md](prompts/update_llms.prompt.md) | Update the llms.txt file in the root folder to reflect changes in documentation or specifications. |
 | Update Markdown File Index | [update_markdown_file_index.prompt.md](prompts/update_markdown_file_index.prompt.md) | Update a markdown file section with an index/table of files from a specified folder. |
-| Update Plan | [update_plan.prompt.md](prompts/update_plan.prompt.md) | Update an existing implementation plan file with new or updated requirements to provide new features, refactoring existing code or upgrading packages, design, architecture or infrastructure. |
 | Update Specification | [update_specification.prompt.md](prompts/update_specification.prompt.md) | Update an existing specification file for the solution, optimized for Generative AI consumption based on new requirements or updates to any existing code. |
 
 #### Prompt Files in workspace usage
@@ -129,9 +129,9 @@ Chat mode examples are found in the [`chatmodes/`](chatmodes/) folder:
 | Demonstrate Understanding | [demonstrate_understanding.chatmode.md](chatmodes/demonstrate_understanding.chatmode.md) | Validate user understanding of code, design patterns, and implementation details through guided questioning. |
 | Expert .NET Software Engineer | [expert_dotnet_software_engineer.chatmode.md](chatmodes/expert_dotnet_software_engineer.chatmode.md) | Provide expert .NET software engineering guidance using modern software design patterns. |
 | Expert React Frontend Engineer | [expert_react_frontend_engineer.chatmode.md](chatmodes/expert_react_frontend_engineer.chatmode.md) | Provide expert React frontend engineering guidance using modern TypeScript and design patterns. |
+| Implementation Plan | [implementation_plan.chatmode.md](chatmodes/implementation_plan.chatmode.md) | Generate an implementation plan for new features or refactoring existing code. |
 | Janitor | [janitor.chatmode.md](chatmodes/janitor.chatmode.md) | Perform janitorial tasks on any codebase including cleanup, simplification, and tech debt remediation. |
 | Mentor | [mentor.chatmode.md](chatmodes/mentor.chatmode.md) | Help mentor the engineer by providing guidance and support. |
-| Plan | [plan.chatmode.md](chatmodes/plan.chatmode.md) | Generate an implementation plan for new features or refactoring existing code. |
 | Principal Software Engineer | [principal_software_engineer.chatmode.md](chatmodes/principal_software_engineer.chatmode.md) | Provide principal-level software engineering guidance with focus on engineering excellence, technical leadership, and pragmatic implementation. |
 | Semantic Kernel (.NET) | [semantic_kernel_dotnet.chatmode.md](chatmodes/semantic_kernel_dotnet.chatmode.md) | Create, update, refactor, explain or work with code using the .NET version of Semantic Kernel. |
 | Semantic Kernel (Python) | [semantic_kernel_python.chatmode.md](chatmodes/semantic_kernel_python.chatmode.md) | Create, update, refactor, explain or work with code using the Python version of Semantic Kernel. |

@@ -14,11 +14,10 @@ This folder contains example custom chat modes for GitHub Copilot. For more info
 | C#/.NET Janitor | [csharp_dotnet_janitor.chatmode.md](csharp_dotnet_janitor.chatmode.md) | Perform janitorial tasks on C#/.NET code including cleanup, modernization, and tech debt remediation. |
 | Demonstrate Understanding | [demonstrate_understanding.chatmode.md](demonstrate_understanding.chatmode.md) | Validate user understanding of code, design patterns, and implementation details through guided questioning. |
 | Expert .NET Software Engineer | [expert_dotnet_software_engineer.chatmode.md](expert_dotnet_software_engineer.chatmode.md) | Provide expert .NET software engineering guidance using modern software design patterns. |
-| Expert React Frontend Engineer | [expert_react_frontend_engineer.chatmode.md](expert_react_frontend_engineer.chatmode.md) | Provide expert React frontend engineering guidance using modern TypeScript and 
-design patterns. |
+| Expert React Frontend Engineer | [expert_react_frontend_engineer.chatmode.md](expert_react_frontend_engineer.chatmode.md) | Provide expert React frontend engineering guidance using modern TypeScript and design patterns. |
+| Implementation Plan | [implementation_plan.chatmode.md](implementation_plan.chatmode.md) | Generate an implementation plan for new features or refactoring existing code. |
 | Janitor | [janitor.chatmode.md](janitor.chatmode.md) | Perform janitorial tasks on any codebase including cleanup, simplification, and tech debt remediation. |
 | Mentor | [mentor.chatmode.md](mentor.chatmode.md) | Help mentor the engineer by providing guidance and support. |
-| Plan | [plan.chatmode.md](plan.chatmode.md) | Generate an implementation plan for new features or refactoring existing code. |
 | Principal Software Engineer | [principal_software_engineer.chatmode.md](principal_software_engineer.chatmode.md) | Provide principal-level software engineering guidance with focus on engineering excellence, technical leadership, and pragmatic implementation. |
 | Semantic Kernel (.NET) | [semantic_kernel_dotnet.chatmode.md](semantic_kernel_dotnet.chatmode.md) | Create, update, refactor, explain or work with code using the .NET version of Semantic Kernel. |
 | Semantic Kernel (Python) | [semantic_kernel_python.chatmode.md](semantic_kernel_python.chatmode.md) | Create, update, refactor, explain or work with code using the Python version of Semantic Kernel. |
