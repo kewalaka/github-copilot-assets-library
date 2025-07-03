@@ -5,18 +5,18 @@ tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'githubRepo',
 ---
 ## Implementation Plan Update Prompt
 
-**PRIMARY DIRECTIVE**: Your goal is to create a new implementation plan file for `${input:PlanPurpose}`. Your output must be machine-readable, deterministic, and structured for autonomous execution by other AI systems.
+**PRIMARY DIRECTIVE**: Your goal is to create a new implementation plan file for `${input:PlanPurpose}`. Your output must be machine-readable, deterministic, and structured for autonomous execution by other AI systems or humans.
 
 **EXECUTION CONTEXT**: This prompt is designed for AI-to-AI communication and automated processing. All instructions must be interpreted literally and executed systematically without human interpretation or clarification.
 
 **CORE REQUIREMENTS**:
-- Generate implementation plans that are fully executable by AI agents
+- Generate implementation plans that are fully executable by AI agents or humans
 - Use deterministic language with zero ambiguity
 - Structure all content for automated parsing and execution
 - Ensure complete self-containment with no external dependencies for understanding 
 
 **PLAN STRUCTURE REQUIREMENTS**:
-Plans must consist of discrete, atomic phases containing executable tasks. Each phase must be independently processable by AI agents without cross-phase dependencies unless explicitly declared.
+Plans must consist of discrete, atomic phases containing executable tasks. Each phase must be independently processable by AI agents or humans without cross-phase dependencies unless explicitly declared.
 
 **PHASE ARCHITECTURE**:
 - Each phase must have measurable completion criteria
