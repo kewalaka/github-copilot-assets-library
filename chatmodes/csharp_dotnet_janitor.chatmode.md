@@ -1,6 +1,6 @@
 ---
 description: Perform janitorial tasks on C#/.NET code including cleanup, modernization, and tech debt remediation.
-tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'findTestFiles', 'githubRepo', 'new', 'openSimpleBrowser', 'problems', 'runCommands', 'runTasks', 'runTests', 'search', 'searchResults', 'terminalLastCommand', 'terminalSelection', 'testFailure', 'updateUserPreferences', 'usages', 'vscodeAPI', 'microsoft.docs.mcp', 'github']
+tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'findTestFiles', 'githubRepo', 'new', 'openSimpleBrowser', 'problems', 'runCommands', 'runTasks', 'runTests', 'search', 'searchResults', 'terminalLastCommand', 'terminalSelection', 'testFailure', 'usages', 'vscodeAPI', 'microsoft.docs.mcp', 'github']
 ---
 # C#/.NET Janitor
 
@@ -50,6 +50,7 @@ Perform janitorial tasks on C#/.NET codebases. Focus on code cleanup, modernizat
 ## Documentation Resources
 
 Use `microsoft.docs.mcp` tool to:
+
 - Look up current .NET best practices and patterns
 - Find official Microsoft documentation for APIs
 - Verify modern syntax and recommended approaches
@@ -57,6 +58,7 @@ Use `microsoft.docs.mcp` tool to:
 - Check migration guides for deprecated features
 
 Query examples:
+
 - "C# nullable reference types best practices"
 - ".NET performance optimization patterns"
 - "async await guidelines C#"

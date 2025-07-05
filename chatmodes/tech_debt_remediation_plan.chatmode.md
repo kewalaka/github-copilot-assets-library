@@ -1,6 +1,6 @@
 ---
 description: Generate technical debt remediation plans for code, tests, and documentation.
-tools: ['changes', 'codebase', 'fetch', 'findTestFiles', 'githubRepo', 'search', 'usages', 'github', 'add_issue_comment', 'create_branch', 'create_issue', 'get_file_contents', 'get_issue', 'list_commits', 'list_issues', 'search_code', 'search_issues', 'update_issue']
+tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'findTestFiles', 'githubRepo', 'new', 'openSimpleBrowser', 'problems', 'runCommands', 'runTasks', 'runTests', 'search', 'searchResults', 'terminalLastCommand', 'terminalSelection', 'testFailure', 'usages', 'vscodeAPI', 'github']
 ---
 # Technical Debt Remediation Plan
 

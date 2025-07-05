@@ -34,7 +34,7 @@ GitHub Copilot provides multiple ways to customize AI responses and tailor assis
 - [Feature Comparison](#copilot-features-comparison-table)
 - [Available Assets](#copilot-feature-library)
   - [Copilot Instructions](#copilot-instructions)
-  - [� Custom Instructions Files](#-custom-instructions-files)
+  - [📋 Custom Instructions Files](#-custom-instructions-files)
   - [📝 Prompt Files (Reusable Prompts)](#-prompt-files-reusable-prompts)
   - [🧩 Custom Chat Modes](#-custom-chat-modes)
   - [🔌 MCP Servers](#-mcp-servers)`,
@@ -229,11 +229,14 @@ function extractTitle(filePath) {
               frontmatterEnded = true;
             }
             continue;
+          }        if (frontmatterEnded && line.startsWith("# ")) {
+          let title = line.substring(2).trim();
+          // Clean up chat mode titles by removing "mode instructions" suffix
+          if (filePath.includes(".chatmode.md")) {
+            title = title.replace(/\s*mode instructions?$/i, '');
           }
-
-          if (frontmatterEnded && line.startsWith("# ")) {
-            return line.substring(2).trim();
-          }
+          return title;
+        }
         }
 
         // Step 3: Format filename for prompt/chatmode/instructions files if no heading found
@@ -320,11 +323,16 @@ function extractDescription(filePath) {
             multilineDescription.push(line.substring(2));
           } else {
             // Look for single-line description field in frontmatter
-            const descriptionMatch = line.match(
-              /^description:\s*['"]?(.+?)['"]?$/
-            );
-            if (descriptionMatch) {
-              return descriptionMatch[1];
+            if (line.includes('description:')) {
+              const descriptionMatch = line.match(/^description:\s*(.*)$/);
+              if (descriptionMatch) {
+                // Remove any surrounding quotes if present and trim whitespace
+                let desc = descriptionMatch[1].trim();
+                desc = desc.replace(/^['"`]+|['"`]+$/g, '');
+                if (desc) {
+                  return desc;
+                }
+              }
             }
           }
         }
@@ -359,12 +367,12 @@ function makeBadges(link, type) {
   // Map file types to their URL types
   const urlTypeMap = {
     'instructions': 'chat-instructions',
-    'prompt': 'prompt-files', 
+    'prompt': 'prompt-files',
     'chatmode': 'chat-modes'
   };
-  
+
   const urlType = urlTypeMap[type] || type;
-  
+
   return `[![Install in VS Code](${vscodeInstallImage})](${vscodeBaseUrl}${encodeURIComponent(
     `vscode:${urlType}/install?url=${repoBaseUrl}/${link}`
   )}) [![Install in VS Code](${vscodeInsidersInstallImage})](${vscodeInsidersBaseUrl}${encodeURIComponent(
@@ -522,16 +530,10 @@ function generateReadme() {
     TEMPLATES.copilotFeatureLibrary,
     TEMPLATES.copilotInstructions,
     instructionsSection,
-    promptsSection
+    promptsSection,
+    chatmodesSection,
+    TEMPLATES.mcpSection
   ];
-
-  // Only include chat modes section if we have any chat modes
-  if (chatmodesSection) {
-    readmeContent.push(chatmodesSection);
-  }
-
-  // Add MCP section
-  readmeContent.push(TEMPLATES.mcpSection);
 
   return readmeContent.join("\n\n");
 }

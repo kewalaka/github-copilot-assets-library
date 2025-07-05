@@ -1,11 +1,9 @@
-````prompt
 ---
 mode: 'agent'
 description: 'Update existing object-oriented component documentation following industry best practices and architectural documentation standards.'
 tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'githubRepo', 'openSimpleBrowser', 'problems', 'runTasks', 'search', 'searchResults', 'terminalLastCommand', 'terminalSelection', 'testFailure', 'usages', 'vscodeAPI']
 ---
-
-## Update Standard OO Component Documentation
+# Update Standard OO Component Documentation
 
 Update the existing documentation file at: `${file}` by analyzing the corresponding component code.
 
@@ -18,7 +16,6 @@ Extract the component path from the existing documentation's front matter (`comp
 - DOC-003: Comply with IEEE 1016 Software Design Description standard
 - DOC-004: Use Agile Documentation principles (just enough documentation that adds value)
 - DOC-005: Target developers and maintainers as primary audience
-
 
 **Analysis Instructions:**
 
@@ -161,5 +158,5 @@ Update the mermaid diagram to show current:
 - REF-004: Refresh troubleshooting (common issues, error messages)
 - REF-005: Update related documentation links
 - REF-006: Add change history and migration notes for this update
+
 ```
-````

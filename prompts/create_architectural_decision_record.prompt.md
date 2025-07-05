@@ -3,11 +3,12 @@ mode: 'agent'
 description: Create an Architectural Decision Record (ADR) document for AI-optimized decision documentation.
 tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'githubRepo', 'openSimpleBrowser', 'problems', 'runTasks', 'search', 'searchResults', 'terminalLastCommand', 'terminalSelection', 'testFailure', 'usages', 'vscodeAPI']
 ---
-## Create Architectural Decision Record Prompt
+# Create Architectural Decision Record
 
 Create an ADR document for `${input:DecisionTitle}` using structured formatting optimized for AI consumption and human readability.
 
 **Inputs:**
+
 - **Context**: `${input:Context}`
 - **Decision**: `${input:Decision}`
 - **Alternatives**: `${input:Alternatives}`
@@ -17,6 +18,7 @@ Create an ADR document for `${input:DecisionTitle}` using structured formatting 
 If any of the required inputs are not provided or cannot be determined from the conversation history, ask the user to provide the missing information before proceeding with ADR generation.
 
 **Requirements:**
+
 - Use precise, unambiguous language
 - Follow standardized ADR format with front matter
 - Include both positive and negative consequences

@@ -3,8 +3,7 @@ mode: 'agent'
 description: 'Create comprehensive, standardized documentation for object-oriented components following industry best practices and architectural documentation standards.'
 tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'githubRepo', 'openSimpleBrowser', 'problems', 'runTasks', 'search', 'searchResults', 'terminalLastCommand', 'terminalSelection', 'testFailure', 'usages', 'vscodeAPI']
 ---
-
-## Generate Standard OO Component Documentation
+# Generate Standard OO Component Documentation
 
 Create comprehensive documentation for the object-oriented component(s) at: `${input:ComponentPath}`.
 
@@ -17,7 +16,6 @@ Analyze the component by examining code in the provided path. If folder, analyze
 - DOC-003: Comply with IEEE 1016 Software Design Description standard
 - DOC-004: Use Agile Documentation principles (just enough documentation that adds value)
 - DOC-005: Target developers and maintainers as primary audience
-
 
 **Analysis Instructions:**
 
@@ -191,4 +189,5 @@ await component.ProcessAsync(data);
 - REF-004: Troubleshooting (common issues, error messages)
 - REF-005: Related documentation links
 - REF-006: Change history and migration notes
+
 ```

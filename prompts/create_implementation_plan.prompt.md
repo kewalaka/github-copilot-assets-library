@@ -3,13 +3,14 @@ mode: 'agent'
 description: Create a new implementation plan file for new features, refactoring existing code or upgrading packages, design, architecture or infrastructure.
 tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'githubRepo', 'openSimpleBrowser', 'problems', 'runTasks', 'search', 'searchResults', 'terminalLastCommand', 'terminalSelection', 'testFailure', 'usages', 'vscodeAPI']
 ---
-## Implementation Plan Update Prompt
+# Implementation Plan Update Prompt
 
 **PRIMARY DIRECTIVE**: Your goal is to create a new implementation plan file for `${input:PlanPurpose}`. Your output must be machine-readable, deterministic, and structured for autonomous execution by other AI systems or humans.
 
 **EXECUTION CONTEXT**: This prompt is designed for AI-to-AI communication and automated processing. All instructions must be interpreted literally and executed systematically without human interpretation or clarification.
 
 **CORE REQUIREMENTS**:
+
 - Generate implementation plans that are fully executable by AI agents or humans
 - Use deterministic language with zero ambiguity
 - Structure all content for automated parsing and execution
@@ -19,12 +20,14 @@ tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'githubRepo',
 Plans must consist of discrete, atomic phases containing executable tasks. Each phase must be independently processable by AI agents or humans without cross-phase dependencies unless explicitly declared.
 
 **PHASE ARCHITECTURE**:
+
 - Each phase must have measurable completion criteria
 - Tasks within phases must be executable in parallel unless dependencies are specified
 - All task descriptions must include specific file paths, function names, and exact implementation details
 - No task should require human interpretation or decision-making
 
 **AI-OPTIMIZED IMPLEMENTATION STANDARDS**:
+
 - Use explicit, unambiguous language with zero interpretation required
 - Structure all content as machine-parseable formats (tables, lists, structured data)
 - Include specific file paths, line numbers, and exact code references where applicable
@@ -34,6 +37,7 @@ Plans must consist of discrete, atomic phases containing executable tasks. Each 
 - Include validation criteria that can be automatically verified
 
 **OUTPUT FILE SPECIFICATIONS**:
+
 - Save implementation plan files in `/plan/` directory
 - Use naming convention: `[purpose]-[component]-[version].md`
 - Purpose prefixes: `upgrade|refactor|feature|data|infrastructure|process|architecture|design`
@@ -44,6 +48,7 @@ Plans must consist of discrete, atomic phases containing executable tasks. Each 
 All implementation plans must strictly adhere to the following template. Each section is required and must be populated with specific, actionable content. AI agents must validate template compliance before execution.
 
 **TEMPLATE VALIDATION RULES**:
+
 - All front matter fields must be present and properly formatted
 - All section headers must match exactly (case-sensitive)
 - All identifier prefixes must follow the specified format

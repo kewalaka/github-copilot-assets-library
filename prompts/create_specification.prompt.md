@@ -3,13 +3,14 @@ mode: 'agent'
 description: Create a new specification file for the solution, optimized for Generative AI consumption.
 tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'githubRepo', 'openSimpleBrowser', 'problems', 'runTasks', 'search', 'searchResults', 'terminalLastCommand', 'terminalSelection', 'testFailure', 'usages', 'vscodeAPI']
 ---
-## Create Specification Prompt
+# Create Specification Prompt
 
 Your goal is to create a new specification file for `${input:SpecPurpose}`.
 
 The specification file must define the requirements, constraints, and interfaces for the solution components in a manner that is clear, unambiguous, and structured for effective use by Generative AIs. Follow established documentation standards and ensure the content is machine-readable and self-contained.
 
 **Best Practices for AI-Ready Specifications:**
+
 - Use precise, explicit, and unambiguous language.
 - Clearly distinguish between requirements, constraints, and recommendations.
 - Use structured formatting (headings, lists, tables) for easy parsing.
@@ -110,9 +111,9 @@ tags: [Optional: List of relevant tags or categories, e.g., `infrastructure`, `p
 
 ## 9. Examples & Edge Cases
 
-``````
+```code
 // Code snippet or data example demonstrating the correct application of the guidelines, including edge cases
-``````
+```
 
 ## 10. Validation Criteria
 
@@ -122,4 +123,5 @@ tags: [Optional: List of relevant tags or categories, e.g., `infrastructure`, `p
 
 [Link to related spec 1]  
 [Link to relevant external documentation]
+
 ```
