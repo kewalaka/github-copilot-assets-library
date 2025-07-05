@@ -8,6 +8,7 @@ A list of prompt files available in this repository:
 
 | Name | Example File | Usage |
 |------|--------------|-------|
+| Create Architectural Decision Record (ADR) | [create_architectural_decision_record.prompt.md](create_architectural_decision_record.prompt.md) | Generate a comprehensive Architectural Decision Record (ADR) document that captures the context, decision, consequences, and alternatives for important technical decisions made during software development or system design. |
 | Create GitHub Issues for Unmet Requirements | [create_github_issues_for_unmet_spec_requirements.prompt.md](create_github_issues_for_unmet_spec_requirements.prompt.md) | Create GitHub Issues for each requirement in a specification file that is not already implemented in the codebase using the GitHub Issue template feature_request.yml. |
 | Create GitHub Issue from Spec | [create_github_issue_feature_from_spec.prompt.md](create_github_issue_feature_from_spec.prompt.md) | Create a GitHub Issue for a feature request using the GitHub Issue template feature_request.yml from a specification file. |
 | Create Implementation Plan | [create_implementation_plan.prompt.md](create_implementation_plan.prompt.md) | Create a new implementation plan file for new features, refactoring existing code or upgrading packages, design, architecture or infrastructure. |
