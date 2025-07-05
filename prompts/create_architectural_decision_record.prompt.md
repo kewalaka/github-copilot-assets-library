@@ -26,7 +26,9 @@ If any of the required inputs are not provided or cannot be determined from the 
 
 The ADR must be saved in the `/docs/adr/` directory using the naming convention: `adr-NNNN-[title-slug].md`, where NNNN is the next sequential 4-digit number (e.g., `adr-0001-database-selection.md`).
 
-**ADR Template:**
+**Required Documentation Structure:**
+
+The documentation file must follow the template below, ensuring that all sections are filled out appropriately. The front matter for the markdown should be structured correctly as per the example following:
 
 ```md
 ---
@@ -42,22 +44,27 @@ superseded_by: ""
 # ADR-NNNN: [Decision Title]
 
 ## Status
+
 **Proposed** | Accepted | Rejected | Superseded | Deprecated
 
 ## Context
+
 [Problem statement, technical constraints, business requirements, and environmental factors requiring this decision.]
 
 ## Decision
+
 [Chosen solution with clear rationale for selection.]
 
 ## Consequences
 
 ### Positive
+
 - **POS-001**: [Beneficial outcomes and advantages]
 - **POS-002**: [Performance, maintainability, scalability improvements]
 - **POS-003**: [Alignment with architectural principles]
 
 ### Negative
+
 - **NEG-001**: [Trade-offs, limitations, drawbacks]
 - **NEG-002**: [Technical debt or complexity introduced]
 - **NEG-003**: [Risks and future challenges]
@@ -65,22 +72,24 @@ superseded_by: ""
 ## Alternatives Considered
 
 ### [Alternative 1 Name]
+
 - **ALT-001**: **Description**: [Brief technical description]
 - **ALT-002**: **Rejection Reason**: [Why this option was not selected]
 
 ### [Alternative 2 Name]
+
 - **ALT-003**: **Description**: [Brief technical description]
 - **ALT-004**: **Rejection Reason**: [Why this option was not selected]
 
 ## Implementation Notes
+
 - **IMP-001**: [Key implementation considerations]
 - **IMP-002**: [Migration or rollout strategy if applicable]
 - **IMP-003**: [Monitoring and success criteria]
 
 ## References
+
 - **REF-001**: [Related ADRs]
 - **REF-002**: [External documentation]
 - **REF-003**: [Standards or frameworks referenced]
 ```
-
-Generate the complete ADR document following this template with all sections populated based on the provided inputs.
