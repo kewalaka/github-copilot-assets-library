@@ -6,11 +6,9 @@ tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'githubRepo',
 
 ## Generate Standard OO Component Documentation
 
-Your goal is to create comprehensive documentation for the object-oriented component `${input:ComponentName}` using the provided source code files and context.
+Your goal is to create comprehensive documentation for the object-oriented component(s) in the specified location: `${input:ComponentPath}`.
 
-Analyze the component files: `${input:ComponentFiles}` within the system context: `${input:SystemContext}` and generate documentation targeted for: `${input:TargetAudience}`.
-
-Consider any existing diagrams: `${input:ExistingDiagrams}` and special requirements: `${input:SpecialRequirements}` when creating the documentation.
+Analyze the component by examining the code in the provided path. If it's a folder, analyze all relevant source files within it. If it's a single file, treat it as the main component file and analyze related files in the same directory as needed.
 
 **Documentation Standards:**
 - Follow C4 Model documentation levels (Context, Containers, Components, Code)
@@ -146,7 +144,12 @@ await component.ProcessAsync(data);
 
 **Analysis Instructions:**
 
-1. **Code Analysis**: Examine the provided source code files to identify:
+1. **Path Analysis**: First, determine what was provided:
+   - If it's a folder path: Scan all source code files within the folder and subfolders
+   - If it's a single file: Use it as the main component and examine related files in the same directory
+   - Identify the primary component name from the file/folder structure
+
+2. **Code Analysis**: Examine the discovered source code files to identify:
    - Class structures and inheritance hierarchies
    - Design patterns and architectural decisions
    - Public APIs and interfaces
@@ -154,26 +157,26 @@ await component.ProcessAsync(data);
    - Configuration mechanisms
    - Error handling approaches
 
-2. **Design Pattern Recognition**: Identify and document patterns such as:
+3. **Design Pattern Recognition**: Identify and document patterns such as:
    - Creational patterns (Factory, Builder, Singleton)
    - Structural patterns (Adapter, Decorator, Facade)
    - Behavioral patterns (Observer, Strategy, Command)
 
-3. **Interface Documentation**: For each public method/property, document:
+4. **Interface Documentation**: For each public method/property, document:
    - Purpose and responsibility
    - Input parameters with types and constraints
    - Return values and their meanings
    - Possible exceptions and error conditions
    - Usage examples and best practices
 
-4. **Quality Assessment**: Evaluate and document:
+5. **Quality Assessment**: Evaluate and document:
    - Performance implications and bottlenecks
    - Security considerations and vulnerabilities
    - Reliability and error handling robustness
    - Maintainability and code organization
    - Testing coverage and strategies
 
-5. **Context Integration**: Consider the system context to document:
+6. **Context Integration**: Infer from code analysis to document:
    - How the component integrates with other system parts
    - Data flow and communication patterns
    - Deployment and configuration requirements
@@ -188,10 +191,11 @@ await component.ProcessAsync(data);
 
 **Error Handling:**
 
-- If source code is incomplete, request specific missing information
-- If component context is unclear, ask clarifying questions about system architecture
+- If the specified path doesn't exist, provide clear guidance on correct path format
+- If no source code files are found in the path, suggest alternative locations to check
+- If component structure is unclear, document what was found and ask for clarification
 - If design patterns are non-standard, document the custom approaches used
-- If documentation requirements are unclear, suggest alternative documentation formats
+- If insufficient code is available for complete documentation, focus on what can be determined and highlight gaps
 
 **Output Format:**
 Generate a well-structured Markdown document with:
