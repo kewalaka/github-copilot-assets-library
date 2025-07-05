@@ -6,46 +6,39 @@ tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'githubRepo',
 
 ## Generate Standard OO Component Documentation
 
-Your goal is to create comprehensive documentation for the object-oriented component(s) in the specified location: `${input:ComponentPath}`.
+Create comprehensive documentation for the object-oriented component(s) at: `${input:ComponentPath}`.
 
-Analyze the component by examining the code in the provided path. If it's a folder, analyze all relevant source files within it. If it's a single file, treat it as the main component file and analyze related files in the same directory as needed.
+Analyze the component by examining code in the provided path. If folder, analyze all source files. If single file, treat as main component and analyze related files in same directory.
 
 **Documentation Standards:**
-- Follow C4 Model documentation levels (Context, Containers, Components, Code)
-- Align with Arc42 software architecture documentation template
-- Comply with IEEE 1016 Software Design Description standard
-- Use Agile Documentation principles (just enough documentation that adds value)
-- Ensure audience-focused writing for developers and maintainers
+
+- DOC-001: Follow C4 Model documentation levels (Context, Containers, Components, Code)
+- DOC-002: Align with Arc42 software architecture documentation template  
+- DOC-003: Comply with IEEE 1016 Software Design Description standard
+- DOC-004: Use Agile Documentation principles (just enough documentation that adds value)
+- DOC-005: Target developers and maintainers as primary audience
+
+**File Location:**
+
+The documentation should be saved in the `/docs/components/` directory and named according to the convention: `[component-name]-documentation.md`.
 
 **Required Documentation Structure:**
 
 ## 1. Component Overview
 
 ### Purpose/Responsibility
-[Clearly state what this component does and its primary responsibility in the system]
-
-### Scope
-**Included:** [What functionality is included in this component]
-**Excluded:** [What functionality is explicitly not handled by this component]
-
-### Context
-[Describe how this component fits within the larger system architecture and its relationships with other components]
+- OVR-001: State component's primary responsibility
+- OVR-002: Define scope (included/excluded functionality)  
+- OVR-003: Describe system context and relationships
 
 ## 2. Architecture Section
 
-### Design Patterns
-[Identify and document the design patterns used (Repository, Factory, Observer, etc.)]
+- ARC-001: Document design patterns used (Repository, Factory, Observer, etc.)
+- ARC-002: List internal and external dependencies with purposes
+- ARC-003: Document component interactions and relationships
+- ARC-004: Include visual diagrams (UML class, sequence, component)
 
-### Dependencies
-[List all internal and external dependencies with their purposes]
-
-### Relationships
-[Document how this component interacts with other system components]
-
-### Visual Diagrams
-[Suggest appropriate diagrams: UML class diagrams, sequence diagrams, component diagrams]
 ```mermaid
-// Suggested diagram placeholder - replace with actual Mermaid syntax
 classDiagram
     class ComponentName {
         // Add class structure
@@ -54,30 +47,20 @@ classDiagram
 
 ## 3. Interface Documentation
 
-### Public Interfaces
-[Document all public interfaces, their purposes, and usage patterns]
+- INT-001: Document all public interfaces and usage patterns
+- INT-002: Create method/property reference table
+- INT-003: Document events/callbacks/notification mechanisms
 
-### Methods/Properties
 | Method/Property | Purpose | Parameters | Return Type | Usage Notes |
 |-----------------|---------|------------|-------------|-------------|
 | [Name] | [Purpose] | [Parameters] | [Type] | [Notes] |
 
-### Events/Callbacks
-[Document any events, callbacks, or notification mechanisms]
-
 ## 4. Implementation Details
 
-### Concrete Classes
-[Document the main implementation classes and their responsibilities]
-
-### Configuration
-[Describe any configuration requirements, settings, or initialization parameters]
-
-### Algorithms
-[Document key algorithms, business logic, or complex processing]
-
-### Performance Characteristics
-[Document performance considerations, bottlenecks, and optimization approaches]
+- IMP-001: Document main implementation classes and responsibilities
+- IMP-002: Describe configuration requirements and initialization
+- IMP-003: Document key algorithms and business logic
+- IMP-004: Note performance characteristics and bottlenecks
 
 ## 5. Usage Examples
 
@@ -90,120 +73,59 @@ component.DoSomething();
 
 ### Advanced Usage
 ```csharp
-// Advanced configuration and usage patterns
-var options = new ComponentOptions
-{
-    // Configuration settings
-};
+// Advanced configuration patterns
+var options = new ComponentOptions();
 var component = ComponentFactory.Create(options);
 await component.ProcessAsync(data);
 ```
 
-### Configuration Examples
-[Provide examples of different configuration scenarios]
-
-### Best Practices
-[Document recommended usage patterns and best practices]
+- USE-001: Provide basic usage examples
+- USE-002: Show advanced configuration patterns
+- USE-003: Document best practices and recommended patterns
 
 ## 6. Quality Attributes
 
-### Security
-[Document security considerations, authentication, authorization, data protection]
-
-### Performance
-[Document performance characteristics, scalability limits, resource usage]
-
-### Reliability
-[Document error handling, fault tolerance, recovery mechanisms]
-
-### Maintainability
-[Document coding standards, testing approaches, documentation maintenance]
-
-### Extensibility
-[Document extension points, plugin architecture, customization options]
+- QUA-001: Security (authentication, authorization, data protection)
+- QUA-002: Performance (characteristics, scalability, resource usage)
+- QUA-003: Reliability (error handling, fault tolerance, recovery)
+- QUA-004: Maintainability (standards, testing, documentation)
+- QUA-005: Extensibility (extension points, customization options)
 
 ## 7. Reference Information
 
-### Dependencies
-[List all dependencies with versions and purposes]
-
-### Configuration Reference
-[Complete configuration options and their effects]
-
-### Testing Guidelines
-[Document how to test this component, mock dependencies, test data setup]
-
-### Troubleshooting
-[Common issues, error messages, diagnostic approaches]
-
-### Related Documentation
-[Links to related specifications, API documentation, external resources]
-
-### Change History
-[Document major changes, version history, migration notes]
+- REF-001: List dependencies with versions and purposes
+- REF-002: Complete configuration options reference
+- REF-003: Testing guidelines and mock setup
+- REF-004: Troubleshooting (common issues, error messages)
+- REF-005: Related documentation links
+- REF-006: Change history and migration notes
 
 **Analysis Instructions:**
 
-1. **Path Analysis**: First, determine what was provided:
-   - If it's a folder path: Scan all source code files within the folder and subfolders
-   - If it's a single file: Use it as the main component and examine related files in the same directory
-   - Identify the primary component name from the file/folder structure
-
-2. **Code Analysis**: Examine the discovered source code files to identify:
-   - Class structures and inheritance hierarchies
-   - Design patterns and architectural decisions
-   - Public APIs and interfaces
-   - Dependencies and external integrations
-   - Configuration mechanisms
-   - Error handling approaches
-
-3. **Design Pattern Recognition**: Identify and document patterns such as:
-   - Creational patterns (Factory, Builder, Singleton)
-   - Structural patterns (Adapter, Decorator, Facade)
-   - Behavioral patterns (Observer, Strategy, Command)
-
-4. **Interface Documentation**: For each public method/property, document:
-   - Purpose and responsibility
-   - Input parameters with types and constraints
-   - Return values and their meanings
-   - Possible exceptions and error conditions
-   - Usage examples and best practices
-
-5. **Quality Assessment**: Evaluate and document:
-   - Performance implications and bottlenecks
-   - Security considerations and vulnerabilities
-   - Reliability and error handling robustness
-   - Maintainability and code organization
-   - Testing coverage and strategies
-
-6. **Context Integration**: Infer from code analysis to document:
-   - How the component integrates with other system parts
-   - Data flow and communication patterns
-   - Deployment and configuration requirements
-   - Monitoring and operational considerations
+- ANA-001: Determine path type (folder vs single file) and identify primary component
+- ANA-002: Examine source code files for class structures and inheritance
+- ANA-003: Identify design patterns and architectural decisions
+- ANA-004: Document public APIs, interfaces, and dependencies
+- ANA-005: Recognize creational/structural/behavioral patterns
+- ANA-006: Document method parameters, return values, exceptions
+- ANA-007: Assess performance, security, reliability, maintainability
+- ANA-008: Infer integration patterns and data flow
 
 **Language-Specific Optimizations:**
 
-- **C#/.NET**: Include async/await patterns, dependency injection, configuration patterns, resource disposal
-- **Java**: Include Spring framework patterns, annotations, exception handling, packaging
-- **TypeScript/JavaScript**: Include module patterns, async patterns, type definitions, npm considerations
-- **Python**: Include package structure, virtual environments, type hints, testing frameworks
+- LNG-001: **C#/.NET** - async/await, dependency injection, configuration, disposal
+- LNG-002: **Java** - Spring framework, annotations, exception handling, packaging  
+- LNG-003: **TypeScript/JavaScript** - modules, async patterns, types, npm
+- LNG-004: **Python** - packages, virtual environments, type hints, testing
 
 **Error Handling:**
 
-- If the specified path doesn't exist, provide clear guidance on correct path format
-- If no source code files are found in the path, suggest alternative locations to check
-- If component structure is unclear, document what was found and ask for clarification
-- If design patterns are non-standard, document the custom approaches used
-- If insufficient code is available for complete documentation, focus on what can be determined and highlight gaps
+- ERR-001: Path doesn't exist - provide correct format guidance
+- ERR-002: No source files found - suggest alternative locations
+- ERR-003: Unclear structure - document findings and request clarification
+- ERR-004: Non-standard patterns - document custom approaches
+- ERR-005: Insufficient code - focus on available information, highlight gaps
 
 **Output Format:**
-Generate a well-structured Markdown document with:
-- Clear heading hierarchy
-- Code blocks for examples and interfaces
-- Tables for method/property documentation
-- Bullet points for feature lists
-- Mermaid diagram suggestions with appropriate syntax
-- Proper markdown formatting for readability and maintainability
 
-Focus on creating living documentation that serves as both reference material and onboarding guide for developers working with this component.
+Generate well-structured Markdown with clear heading hierarchy, code blocks, tables, bullet points, and proper formatting for readability and maintainability.
