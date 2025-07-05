@@ -24,6 +24,22 @@ The documentation should be saved in the `/docs/components/` directory and named
 
 **Required Documentation Structure:**
 
+The documentation file must follow the template below, ensuring that all sections are filled out appropriately. The front matter for the markdown should be structured correctly as per the example following:
+
+```md
+---
+title: [Component Name] - Technical Documentation
+version: [Optional: e.g., 1.0, Date]  
+date_created: [YYYY-MM-DD]  
+last_updated: [Optional: YYYY-MM-DD]  
+owner: [Optional: Team/Individual responsible for this component]
+tags: [Optional: List of relevant tags or categories, e.g., `component`, `documentation`, `architecture` etc]
+---
+
+# [Component Name] Documentation
+
+[A short concise introduction to the component and its purpose within the system.]
+
 ## 1. Component Overview
 
 ### Purpose/Responsibility
@@ -141,6 +157,7 @@ await component.ProcessAsync(data);
 - REF-004: Troubleshooting (common issues, error messages)
 - REF-005: Related documentation links
 - REF-006: Change history and migration notes
+```
 
 **Analysis Instructions:**
 
