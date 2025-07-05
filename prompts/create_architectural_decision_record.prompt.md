@@ -13,12 +13,16 @@ Create an ADR document for `${input:DecisionTitle}` using structured formatting 
 - **Alternatives**: `${input:Alternatives}`
 - **Stakeholders**: `${input:Stakeholders}`
 
+**Input Validation:**
+If any of the required inputs are not provided or cannot be determined from the conversation history, ask the user to provide the missing information before proceeding with ADR generation.
+
 **Requirements:**
 - Use precise, unambiguous language
 - Follow standardized ADR format with front matter
 - Include both positive and negative consequences
 - Document alternatives with rejection rationale
 - Structure for machine parsing and human reference
+- Use coded bullet points (3-4 letter codes + 3-digit numbers) for multi-item sections
 
 The ADR must be saved in the `/docs/adr/` directory using the naming convention: `adr-NNNN-[title-slug].md`, where NNNN is the next sequential 4-digit number (e.g., `adr-0001-database-selection.md`).
 
@@ -49,34 +53,34 @@ superseded_by: ""
 ## Consequences
 
 ### Positive
-- [Beneficial outcomes and advantages]
-- [Performance, maintainability, scalability improvements]
-- [Alignment with architectural principles]
+- **POS-001**: [Beneficial outcomes and advantages]
+- **POS-002**: [Performance, maintainability, scalability improvements]
+- **POS-003**: [Alignment with architectural principles]
 
 ### Negative
-- [Trade-offs, limitations, drawbacks]
-- [Technical debt or complexity introduced]
-- [Risks and future challenges]
+- **NEG-001**: [Trade-offs, limitations, drawbacks]
+- **NEG-002**: [Technical debt or complexity introduced]
+- **NEG-003**: [Risks and future challenges]
 
 ## Alternatives Considered
 
 ### [Alternative 1 Name]
-- **Description**: [Brief technical description]
-- **Rejection Reason**: [Why this option was not selected]
+- **ALT-001**: **Description**: [Brief technical description]
+- **ALT-002**: **Rejection Reason**: [Why this option was not selected]
 
 ### [Alternative 2 Name]
-- **Description**: [Brief technical description]
-- **Rejection Reason**: [Why this option was not selected]
+- **ALT-003**: **Description**: [Brief technical description]
+- **ALT-004**: **Rejection Reason**: [Why this option was not selected]
 
 ## Implementation Notes
-- [Key implementation considerations]
-- [Migration or rollout strategy if applicable]
-- [Monitoring and success criteria]
+- **IMP-001**: [Key implementation considerations]
+- **IMP-002**: [Migration or rollout strategy if applicable]
+- **IMP-003**: [Monitoring and success criteria]
 
 ## References
-- [Related ADRs]
-- [External documentation]
-- [Standards or frameworks referenced]
+- **REF-001**: [Related ADRs]
+- **REF-002**: [External documentation]
+- **REF-003**: [Standards or frameworks referenced]
 ```
 
 Generate the complete ADR document following this template with all sections populated based on the provided inputs.
