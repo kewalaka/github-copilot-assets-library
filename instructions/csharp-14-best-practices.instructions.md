@@ -1,9 +1,9 @@
 ---
-description: "C# 14 best practices and formatting guidelines for AI code generation"
 applyTo: "**/*.cs"
+description: "C# 14 best practices and formatting guidelines for AI code generation"
 ---
 
-# C# 14 Best Practices for AI Code Generation
+# C# 14 Best Practices for AI Code Generation Instructions
 
 ## Core Language Features
 

@@ -1,9 +1,9 @@
 ---
-description: "C# best practices and formatting guidelines for AI code generation (all versions)"
 applyTo: "**/*.cs"
+description: "C# best practices and formatting guidelines for AI code generation (all versions)"
 ---
 
-# C# Best Practices for AI Code Generation
+# C# Best Practices for AI Code Generation Instructions
 
 ## Code Style and Formatting
 

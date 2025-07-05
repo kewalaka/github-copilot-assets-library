@@ -13,7 +13,7 @@ This is a GitHub Copilot Assets Library that provides customization assets inclu
 - `/prompts/` - Reusable prompt files for common tasks
 - `/chatmodes/` - Custom chat modes with specialized instructions and tools
 - `/instructions/` - Custom instruction files for Copilot
-- `.vscode/mcp.json` - Model Context Protocol server configurations
+- `/mcp/` - Sample Model Context Protocol (MCP) server configurations for external integrations
 - `.devcontainer/` - Development container for standardized environment
 
 ### Key Asset Types
@@ -26,6 +26,7 @@ This is a GitHub Copilot Assets Library that provides customization assets inclu
 ### File Naming
 - Chat modes: `[descriptive-name].chatmode.md`
 - Prompts: `[descriptive-name].prompt.md`
+- Instructions: `[descriptive-name].instructions.md`
 - Use lowercase with hyphens for file names
 
 ### Markdown Standards
@@ -68,3 +69,10 @@ Follow VSCode settings pattern:
 - Use MSTest, FluentAssertions, Moq for testing examples
 
 This library serves as a reference implementation for GitHub Copilot customizations across various development scenarios.
+
+## Code Review
+When performing a code review:
+- validate that there are changes in the `README.md` file that match the changes in the pull request. If there are no changes, or if the changes do not match, then the pull request is not ready to be merged.
+- ensure that the values in the front matter are wrapped in single quotes.
+- ensure that the `description` field in the front matter is not empty.
+- on a `.instructions.md` file, ensure there is an `applyTo` property in the front matter that specifies the file or files to which the instructions apply.
