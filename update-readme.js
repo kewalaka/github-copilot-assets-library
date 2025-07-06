@@ -33,7 +33,6 @@ GitHub Copilot provides multiple ways to customize AI responses and tailor assis
   tableOfContents: `## Table of Contents
 
 - [Available Assets](#copilot-feature-library)
-  - [Copilot Instructions](#copilot-instructions)
   - [📋 Custom Instructions Files](#-custom-instructions-files)
   - [📝 Prompt Files (Reusable Prompts)](#-prompt-files-reusable-prompts)
   - [🧩 Custom Chat Modes](#-custom-chat-modes)
@@ -45,7 +44,6 @@ GitHub Copilot provides multiple ways to customize AI responses and tailor assis
 
 | Asset Type | Description | Availability | Configuration |
 |------------|-------------|--------------|---------------|
-| **Copilot Instructions** | Repository-wide instructions to set tone, style, and context for Copilot responses | VS Code & VS | User & Workspace |
 | **Custom Instructions** | Language-specific guidelines that apply to file types (e.g., C# files) | VS Code & VS | User & Workspace |
 | **Prompt Files** | Reusable, standalone prompts for specific tasks with optional variables | VS Code only | User & Workspace |
 | **Custom Chat Modes** | Predefined instructions and tools for specialized workflows and contexts | VS Code only | User & Workspace |
@@ -55,35 +53,12 @@ GitHub Copilot provides multiple ways to customize AI responses and tailor assis
 
 | Feature Name | Description | VS Code/VS Support | Configuration Level |
 |--------------|-------------|--------------------|---------------------|
-| Copilot Instructions | [Custom instructions](https://code.visualstudio.com/docs/copilot/copilot-customization#_custom-instructions) to set tone, style, and context for Copilot responses. | VS Code & VS | User & Workspace |
 | Custom Code Generation Instructions | [Code generation instructions](https://code.visualstudio.com/docs/copilot/copilot-customization#_custom-instructions-examples) for code generation tasks. | VS Code only | User & Workspace |
 | Prompt Files | [Prompt files](https://code.visualstudio.com/docs/copilot/copilot-customization#_prompt-files-experimental) are reusable prompts for common tasks. | VS Code only | User & Workspace |
 | Custom Chat Modes | [Custom chat modes](https://code.visualstudio.com/docs/copilot/chat/chat-modes#_custom-chat-modes) combine instructions and tools for specific workflows. | VS Code only | User & Workspace |
 | MCP Servers | [MCP Servers](https://code.visualstudio.com/docs/copilot/chat/mcp-servers) enable Copilot to call external services via Model Context Protocol. | VS Code & VS | User & Workspace |`,
 
   copilotFeatureLibrary: `## Copilot Feature Library`,
-
-  copilotInstructions: `### Copilot Instructions
-
-Examples for Copilot Instructions can be found in subfolders in the [\`copilot-instructions/\`](copilot-instructions/) folder.
-
-| Name | Example File | Usage |
-|------|--------------|-------|
-| Azure Developer Solution Accelerator | [copilot-instructions/azure_developer_solution_accelerator/copilot-instructions.md](copilot-instructions/azure_developer_solution_accelerator/copilot-instructions.md) | Azure Developer CLI (AZD) solution accelerator for deploying Azure resources using modern Infrastructure as Code practices. |
-
-> [!IMPORTANT]
-> Copilot Instructions only apply to Chat modes (Ask, Edit, Agent or custom modes), they do not apply to Copilot auto-completion in the editor.
-
-#### Copilot Instructions in workspace usage
-
-To set a custom instruction file in your repository:
-
-1. Copy it from the subfolder in the \`copilot-instructions\` folder in this repository to the \`.github/copilot-instructions/\` folder of your repository.
-1. (Optional) In Visual Studio Code, use the \`Auto-update instructions\` command to update the instructions in your repository based on the content of the repository and other AI tools that may have stored instructions in your repository.
-
-    ![Auto-update instructions command in Visual Studio Code](images/auto-update-copilot-instructions.png)
-
-This file will automatically apply to all contributors when they use GitHub Copilot for all file types.`,
 
   instructionsSection: `### 📋 Custom Instructions Files
 
@@ -96,7 +71,7 @@ Custom instruction files with specific language and framework guidance can be fo
 
 To set a custom instruction file in your repository:
 
-1. Copy it from the \`instructions\` folder in this repository to the \`.github/instructions/\` folder of your repository.
+1. Copy these instructions to your \`.github/copilot-instructions.md\` file or create task-specific \`.github/.instructions.md\` files in your workspace's \`.github/instructions\` folder.
 
 This file will automatically apply to all contributors when they use GitHub Copilot in the specified file types (e.g., C# files).`,
 
@@ -685,7 +660,6 @@ function generateReadme() {
     TEMPLATES.header,
     TEMPLATES.tableOfContents,
     TEMPLATES.copilotFeatureLibrary,
-    TEMPLATES.copilotInstructions,
     instructionsResult.mainReadmeSection,
     promptsResult.mainReadmeSection,
     chatmodesResult.mainReadmeSection,
