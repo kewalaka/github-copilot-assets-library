@@ -4,7 +4,7 @@ description: Suggest relevant GitHub Copilot chatmode files from the awesome-cop
 tools: ['changes', 'codebase', 'editFiles', 'fetch', 'findTestFiles', 'githubRepo', 'new', 'openSimpleBrowser', 'problems', 'runCommands', 'runTasks', 'runTests', 'search', 'searchResults', 'terminalLastCommand', 'terminalSelection', 'testFailure', 'usages', 'vscodeAPI', 'github']
 ---
 
-# Suggest GitHub Copilot Chatmodes
+# Suggest Awesome GitHub Copilot Chatmodes
 
 Analyze current repository context and suggest relevant chatmode files from the [GitHub awesome-copilot repository](https://github.com/github/awesome-copilot/tree/main/chatmodes) that are not already available in this repository.
 
