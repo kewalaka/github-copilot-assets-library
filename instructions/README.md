@@ -6,8 +6,12 @@ This folder contains example custom instructions for GitHub Copilot. For more in
 
 | File | Pattern | Description |
 |------|---------|-------------|
-| [csharp-14-best-practices.instructions.md](csharp-14-best-practices.instructions.md) | `**/*.cs` | C# 14 best practices and formatting guidelines for AI code generation |
-| [csharp-best-practices.instructions.md](csharp-best-practices.instructions.md) | `**/*.cs` | C# best practices and formatting guidelines for AI code generation (all versions) |
+| [azure-developer-solution-accelerator.md](azure-developer-solution-accelerator.md) | `**` |  |
+| [copilot-thought-logging.instructions.md](copilot-thought-logging.instructions.md) | `**` | See process Copilot is following where you can edit this to reshape the interaction or save when follow up may be needed |
+| [csharp-14-best-practices.instructions.md](csharp-14-best-practices.instructions.md) | `**/*.cs` |  |
+| [csharp-best-practices.instructions.md](csharp-best-practices.instructions.md) | `**/*.cs` |  |
+| [markdown.instructions.md](markdown.instructions.md) | `**/*.md` | Documentation and content creation standards |
+
 
 ## Usage
 

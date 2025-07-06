@@ -17,6 +17,8 @@ I've spent many hours building my own tools and prompts and chat modes to help m
 
 > [!NOTE]
 > I created this repository without knowing the GitHub team had plans to release a similar library [https://github.com/github/awesome-copilot](https://github.com/github/awesome-copilot). However, I am planning to migrate all the resource from this repository over to the Github Awesome Copilot repository in the future. So, you will start seeing duplicated content in both repositories.
+>
+> I am considering retaining this repository to enhance it with more detailed pages on each chat mode, prompt file showing usage examples. As what is possible with these modes often require more detailed examination and demonstrations.
 
 ## 🎯 GitHub Copilot Customization Features
 
@@ -30,14 +32,14 @@ GitHub Copilot provides multiple ways to customize AI responses and tailor assis
 
   tableOfContents: `## Table of Contents
 
-- [Asset Types Overview](#asset-types-overview)
-- [Feature Comparison](#copilot-features-comparison-table)
 - [Available Assets](#copilot-feature-library)
   - [Copilot Instructions](#copilot-instructions)
   - [📋 Custom Instructions Files](#-custom-instructions-files)
   - [📝 Prompt Files (Reusable Prompts)](#-prompt-files-reusable-prompts)
   - [🧩 Custom Chat Modes](#-custom-chat-modes)
-  - [🔌 MCP Servers](#-mcp-servers)`,
+  - [🔌 MCP Servers](#-mcp-servers)
+- [Asset Types Overview](#asset-types-overview)
+- [Feature Comparison](#copilot-features-comparison-table)`,
 
   assetTypesOverview: `## Asset Types Overview
 
@@ -165,6 +167,60 @@ trademarks or logos is subject to and must follow
 [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party's policies.`,
+
+  // Template for prompts README.md
+  promptsReadmeTemplate: `# Prompt Files (experimental)
+
+This folder contains example prompt files (experimental) for GitHub Copilot. For more information on how to use these, see the [GitHub Copilot prompt files](https://code.visualstudio.com/docs/copilot/copilot-customization#_prompt-files-experimental).
+
+## Prompt Files Index
+
+A list of prompt files available in this repository:
+
+{{PROMPTS_TABLE}}
+
+## Usage
+
+To use these prompt files:
+
+1. Copy the desired \`.prompt.md\` file from this folder to your VS Code user settings folder or workspace \`.github/prompts\` folder
+1. Access the prompt file through the chat interface in VS Code by typing \`/\` and selecting the prompt from the list
+
+    ![Prompt file execution in Visual Studio Code](../images/run-custom-prompt-file.png)`,
+
+  // Template for chatmodes README.md
+  chatmodesReadmeTemplate: `# Custom Chat Modes
+
+This folder contains example custom chat modes for GitHub Copilot. For more information on how to use these, see the [GitHub Copilot custom chat modes](https://code.visualstudio.com/docs/copilot/chat/chat-modes#_custom-chat-modes).
+
+## Available Chat Modes
+
+{{CHATMODES_TABLE}}
+
+## Usage
+
+To use these chat modes:
+
+1. Copy the desired \`.chatmode.md\` file to your VS Code user settings folder or workspace \`.github/chatmodes\` folder
+1. Select the new chat mode through the chat interface in VS Code
+`,
+
+  // Template for instructions README.md
+  instructionsReadmeTemplate: `# Custom Instructions
+
+This folder contains example custom instructions for GitHub Copilot. For more information on how to use these, see the [GitHub Copilot custom instructions](https://code.visualstudio.com/docs/copilot/copilot-customization#_custom-instructions).
+
+## Available Instruction Files
+
+{{INSTRUCTIONS_TABLE}}
+
+## Usage
+
+To use these instructions:
+
+1. Copy the desired \`.instructions.md\` file to your VS Code user settings folder or workspace \`.github/instructions\` folder
+1. Select the new instruction set through the chat interface in VS Code
+`,
 };
 
 // Add error handling utility
@@ -350,6 +406,44 @@ function extractDescription(filePath) {
   );
 }
 
+function extractPattern(filePath) {
+  return safeFileOperation(
+    () => {
+      const content = fs.readFileSync(filePath, "utf8");
+      const lines = content.split("\n");
+      let inFrontmatter = false;
+      let frontmatterEnded = false;
+
+      for (const line of lines) {
+        if (line.trim() === "---") {
+          if (!inFrontmatter) {
+            inFrontmatter = true;
+          } else if (!frontmatterEnded) {
+            frontmatterEnded = true;
+            break;
+          }
+          continue;
+        }
+
+        if (inFrontmatter && !frontmatterEnded) {
+          if (line.includes("applyTo:")) {
+            // Extract everything after 'applyTo:'
+            const afterApplyTo = line
+              .substring(line.indexOf("applyTo:") + 8)
+              .trim();
+            // Remove quotes if present
+            return afterApplyTo.replace(/^['"]|['"]$/g, "");
+          }
+        }
+      }
+
+      return null;
+    },
+    filePath,
+    null
+  );
+}
+
 /**
  * Generate badges for installation links in VS Code and VS Code Insiders.
  * @param {string} link - The relative link to the instructions or prompts file.
@@ -384,17 +478,21 @@ function makeBadges(link, type) {
  * Generate the instructions section with a table of all instructions
  */
 function generateInstructionsSection(instructionsDir) {
-  // Get all instruction files
+  // Get all instruction files (exclude README.md)
   const instructionFiles = fs
     .readdirSync(instructionsDir)
-    .filter((file) => file.endsWith(".md"))
+    .filter((file) => file.endsWith(".md") && file !== "README.md")
     .sort();
 
   console.log(`Found ${instructionFiles.length} instruction files`);
 
-  // Create table header
+  // Create table header for main README
   let instructionsContent =
     "| Title | Description | Install |\n| ----- | ----------- | ------- |\n";
+
+  // Create table header for instructions README (different format)
+  let instructionsReadmeContent =
+    "| File | Pattern | Description |\n|------|---------|-------------|\n";
 
   // Generate table rows for each instruction file
   for (const file of instructionFiles) {
@@ -404,10 +502,12 @@ function generateInstructionsSection(instructionsDir) {
 
     // Check if there's a description in the frontmatter
     const customDescription = extractDescription(filePath);
+    const pattern = extractPattern(filePath);
 
     // Create badges for installation links
     const badges = makeBadges(link, "instructions");
 
+    // Add to main README table
     if (customDescription && customDescription !== "null") {
       // Use the description from frontmatter
       instructionsContent += `| [${title}](${link}) | ${customDescription} | ${badges} |\n`;
@@ -416,9 +516,17 @@ function generateInstructionsSection(instructionsDir) {
       const topic = title.split(" ").pop().replace(/s$/, "");
       instructionsContent += `| [${title}](${link}) | ${topic} specific coding standards and best practices | ${badges} |\n`;
     }
+
+    // Add to instructions README table (just filename, pattern, and description)
+    const description = customDescription && customDescription !== "null" ? customDescription : "";
+    const displayPattern = pattern || "";
+    instructionsReadmeContent += `| [${file}](${file}) | \`${displayPattern}\` | ${description} |\n`;
   }
 
-  return `${TEMPLATES.instructionsSection}\n\n${instructionsContent}\n${TEMPLATES.instructionsUsage}`;
+  return {
+    mainReadmeSection: `${TEMPLATES.instructionsSection}\n\n${instructionsContent}\n${TEMPLATES.instructionsUsage}`,
+    instructionsReadmeTable: instructionsReadmeContent
+  };
 }
 
 /**
@@ -433,9 +541,13 @@ function generatePromptsSection(promptsDir) {
 
   console.log(`Found ${promptFiles.length} prompt files`);
 
-  // Create table header
+  // Create table header for main README
   let promptsContent =
     "| Title | Description | Install |\n| ----- | ----------- | ------- |\n";
+
+  // Create table header for prompts README (different format)
+  let promptsReadmeContent =
+    "| Name | Example File | Usage |\n|------|--------------|-------|\n";
 
   // Generate table rows for each prompt file
   for (const file of promptFiles) {
@@ -449,14 +561,22 @@ function generatePromptsSection(promptsDir) {
     // Create badges for installation links
     const badges = makeBadges(link, "prompt");
 
+    // Add to main README table
     if (customDescription && customDescription !== "null") {
       promptsContent += `| [${title}](${link}) | ${customDescription} | ${badges} |\n`;
     } else {
       promptsContent += `| [${title}](${link}) | | ${badges} |\n`;
     }
+
+    // Add to prompts README table (just filename link and description)
+    const description = customDescription && customDescription !== "null" ? customDescription : "";
+    promptsReadmeContent += `| ${title} | [${file}](${file}) | ${description} |\n`;
   }
 
-  return `${TEMPLATES.promptsSection}\n\n${promptsContent}\n${TEMPLATES.promptsUsage}`;
+  return {
+    mainReadmeSection: `${TEMPLATES.promptsSection}\n\n${promptsContent}\n${TEMPLATES.promptsUsage}`,
+    promptsReadmeTable: promptsReadmeContent
+  };
 }
 
 /**
@@ -466,7 +586,10 @@ function generateChatModesSection(chatmodesDir) {
   // Check if chatmodes directory exists
   if (!fs.existsSync(chatmodesDir)) {
     console.log("Chat modes directory does not exist");
-    return "";
+    return {
+      mainReadmeSection: "",
+      chatmodesReadmeTable: ""
+    };
   }
 
   // Get all chat mode files
@@ -479,12 +602,19 @@ function generateChatModesSection(chatmodesDir) {
 
   // If no chat modes, return empty string
   if (chatmodeFiles.length === 0) {
-    return "";
+    return {
+      mainReadmeSection: "",
+      chatmodesReadmeTable: ""
+    };
   }
 
-  // Create table header
+  // Create table header for main README
   let chatmodesContent =
     "| Title | Description | Install |\n| ----- | ----------- | ------- |\n";
+
+  // Create table header for chatmodes README (different format)
+  let chatmodesReadmeContent =
+    "| Name | File | Usage |\n|------|------|-------|\n";
 
   // Generate table rows for each chat mode file
   for (const file of chatmodeFiles) {
@@ -498,14 +628,43 @@ function generateChatModesSection(chatmodesDir) {
     // Create badges for installation links
     const badges = makeBadges(link, "chatmode");
 
+    // Add to main README table
     if (customDescription && customDescription !== "null") {
       chatmodesContent += `| [${title}](${link}) | ${customDescription} | ${badges} |\n`;
     } else {
       chatmodesContent += `| [${title}](${link}) | | ${badges} |\n`;
     }
+
+    // Add to chatmodes README table (just filename link and description)
+    const description = customDescription && customDescription !== "null" ? customDescription : "";
+    chatmodesReadmeContent += `| ${title} | [${file}](${file}) | ${description} |\n`;
   }
 
-  return `${TEMPLATES.chatmodesSection}\n\n${chatmodesContent}\n${TEMPLATES.chatmodesUsage}`;
+  return {
+    mainReadmeSection: `${TEMPLATES.chatmodesSection}\n\n${chatmodesContent}\n${TEMPLATES.chatmodesUsage}`,
+    chatmodesReadmeTable: chatmodesReadmeContent
+  };
+}
+
+/**
+ * Generate the prompts README.md content
+ */
+function generatePromptsReadme(promptsReadmeTable) {
+  return TEMPLATES.promptsReadmeTemplate.replace('{{PROMPTS_TABLE}}', promptsReadmeTable);
+}
+
+/**
+ * Generate the chatmodes README.md content
+ */
+function generateChatModesReadme(chatmodesReadmeTable) {
+  return TEMPLATES.chatmodesReadmeTemplate.replace('{{CHATMODES_TABLE}}', chatmodesReadmeTable);
+}
+
+/**
+ * Generate the instructions README.md content
+ */
+function generateInstructionsReadme(instructionsReadmeTable) {
+  return TEMPLATES.instructionsReadmeTemplate.replace('{{INSTRUCTIONS_TABLE}}', instructionsReadmeTable);
 }
 
 /**
@@ -517,35 +676,49 @@ function generateReadme() {
   const chatmodesDir = path.join(__dirname, "chatmodes");
 
   // Generate each section
-  const instructionsSection = generateInstructionsSection(instructionsDir);
-  const promptsSection = generatePromptsSection(promptsDir);
-  const chatmodesSection = generateChatModesSection(chatmodesDir);
+  const instructionsResult = generateInstructionsSection(instructionsDir);
+  const promptsResult = generatePromptsSection(promptsDir);
+  const chatmodesResult = generateChatModesSection(chatmodesDir);
 
   // Build the complete README content with template sections
   let readmeContent = [
     TEMPLATES.header,
     TEMPLATES.tableOfContents,
-    TEMPLATES.assetTypesOverview,
-    TEMPLATES.featureComparison,
     TEMPLATES.copilotFeatureLibrary,
     TEMPLATES.copilotInstructions,
-    instructionsSection,
-    promptsSection,
-    chatmodesSection,
-    TEMPLATES.mcpSection
+    instructionsResult.mainReadmeSection,
+    promptsResult.mainReadmeSection,
+    chatmodesResult.mainReadmeSection,
+    TEMPLATES.mcpSection,
+    TEMPLATES.assetTypesOverview,
+    TEMPLATES.featureComparison,
+    TEMPLATES.footer
   ];
 
-  return readmeContent.join("\n\n");
+  return {
+    mainReadme: readmeContent.join("\n\n"),
+    promptsReadmeTable: promptsResult.promptsReadmeTable,
+    chatmodesReadmeTable: chatmodesResult.chatmodesReadmeTable,
+    instructionsReadmeTable: instructionsResult.instructionsReadmeTable
+  };
 }
 
 // Main execution
 try {
-  console.log("Generating README.md from scratch...");
+  console.log("Generating README.md files from scratch...");
 
   const readmePath = path.join(__dirname, "README.md");
-  const newReadmeContent = generateReadme();
+  const promptsReadmePath = path.join(__dirname, "prompts", "README.md");
+  const chatmodesReadmePath = path.join(__dirname, "chatmodes", "README.md");
+  const instructionsReadmePath = path.join(__dirname, "instructions", "README.md");
 
-  // Check if the README file already exists
+  const result = generateReadme();
+  const newReadmeContent = result.mainReadme;
+  const newPromptsReadmeContent = generatePromptsReadme(result.promptsReadmeTable);
+  const newChatmodesReadmeContent = generateChatModesReadme(result.chatmodesReadmeTable);
+  const newInstructionsReadmeContent = generateInstructionsReadme(result.instructionsReadmeTable);
+
+  // Check if the main README file already exists
   if (fs.existsSync(readmePath)) {
     const originalContent = fs.readFileSync(readmePath, "utf8");
     const hasChanges = originalContent !== newReadmeContent;
@@ -561,7 +734,58 @@ try {
     fs.writeFileSync(readmePath, newReadmeContent);
     console.log("README.md created successfully!");
   }
+
+  // Check if the prompts README file already exists
+  if (fs.existsSync(promptsReadmePath)) {
+    const originalPromptsContent = fs.readFileSync(promptsReadmePath, "utf8");
+    const hasPromptsChanges = originalPromptsContent !== newPromptsReadmeContent;
+
+    if (hasPromptsChanges) {
+      fs.writeFileSync(promptsReadmePath, newPromptsReadmeContent);
+      console.log("prompts/README.md updated successfully!");
+    } else {
+      console.log("prompts/README.md is already up to date. No changes needed.");
+    }
+  } else {
+    // Create the prompts README file if it doesn't exist
+    fs.writeFileSync(promptsReadmePath, newPromptsReadmeContent);
+    console.log("prompts/README.md created successfully!");
+  }
+
+  // Check if the chatmodes README file already exists
+  if (fs.existsSync(chatmodesReadmePath)) {
+    const originalChatmodesContent = fs.readFileSync(chatmodesReadmePath, "utf8");
+    const hasChatmodesChanges = originalChatmodesContent !== newChatmodesReadmeContent;
+
+    if (hasChatmodesChanges) {
+      fs.writeFileSync(chatmodesReadmePath, newChatmodesReadmeContent);
+      console.log("chatmodes/README.md updated successfully!");
+    } else {
+      console.log("chatmodes/README.md is already up to date. No changes needed.");
+    }
+  } else {
+    // Create the chatmodes README file if it doesn't exist
+    fs.writeFileSync(chatmodesReadmePath, newChatmodesReadmeContent);
+    console.log("chatmodes/README.md created successfully!");
+  }
+
+  // Check if the instructions README file already exists
+  if (fs.existsSync(instructionsReadmePath)) {
+    const originalInstructionsContent = fs.readFileSync(instructionsReadmePath, "utf8");
+    const hasInstructionsChanges = originalInstructionsContent !== newInstructionsReadmeContent;
+
+    if (hasInstructionsChanges) {
+      fs.writeFileSync(instructionsReadmePath, newInstructionsReadmeContent);
+      console.log("instructions/README.md updated successfully!");
+    } else {
+      console.log("instructions/README.md is already up to date. No changes needed.");
+    }
+  } else {
+    // Create the instructions README file if it doesn't exist
+    fs.writeFileSync(instructionsReadmePath, newInstructionsReadmeContent);
+    console.log("instructions/README.md created successfully!");
+  }
 } catch (error) {
-  console.error(`Error generating README.md: ${error.message}`);
+  console.error(`Error generating README.md files: ${error.message}`);
   process.exit(1);
 }

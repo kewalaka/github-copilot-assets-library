@@ -10,6 +10,8 @@ I've spent many hours building my own tools and prompts and chat modes to help m
 
 > [!NOTE]
 > I created this repository without knowing the GitHub team had plans to release a similar library [https://github.com/github/awesome-copilot](https://github.com/github/awesome-copilot). However, I am planning to migrate all the resource from this repository over to the Github Awesome Copilot repository in the future. So, you will start seeing duplicated content in both repositories.
+>
+> I am considering retaining this repository to enhance it with more detailed pages on each chat mode, prompt file showing usage examples. As what is possible with these modes often require more detailed examination and demonstrations.
 
 ## 🎯 GitHub Copilot Customization Features
 
@@ -23,34 +25,14 @@ GitHub Copilot provides multiple ways to customize AI responses and tailor assis
 
 ## Table of Contents
 
-- [Asset Types Overview](#asset-types-overview)
-- [Feature Comparison](#copilot-features-comparison-table)
 - [Available Assets](#copilot-feature-library)
   - [Copilot Instructions](#copilot-instructions)
   - [📋 Custom Instructions Files](#-custom-instructions-files)
   - [📝 Prompt Files (Reusable Prompts)](#-prompt-files-reusable-prompts)
   - [🧩 Custom Chat Modes](#-custom-chat-modes)
   - [🔌 MCP Servers](#-mcp-servers)
-
-## Asset Types Overview
-
-| Asset Type | Description | Availability | Configuration |
-|------------|-------------|--------------|---------------|
-| **Copilot Instructions** | Repository-wide instructions to set tone, style, and context for Copilot responses | VS Code & VS | User & Workspace |
-| **Custom Instructions** | Language-specific guidelines that apply to file types (e.g., C# files) | VS Code & VS | User & Workspace |
-| **Prompt Files** | Reusable, standalone prompts for specific tasks with optional variables | VS Code only | User & Workspace |
-| **Custom Chat Modes** | Predefined instructions and tools for specialized workflows and contexts | VS Code only | User & Workspace |
-| **MCP Servers** | External service integrations via Model Context Protocol for enhanced functionality | VS Code & VS | User & Workspace |
-
-## Copilot Features Comparison Table
-
-| Feature Name | Description | VS Code/VS Support | Configuration Level |
-|--------------|-------------|--------------------|---------------------|
-| Copilot Instructions | [Custom instructions](https://code.visualstudio.com/docs/copilot/copilot-customization#_custom-instructions) to set tone, style, and context for Copilot responses. | VS Code & VS | User & Workspace |
-| Custom Code Generation Instructions | [Code generation instructions](https://code.visualstudio.com/docs/copilot/copilot-customization#_custom-instructions-examples) for code generation tasks. | VS Code only | User & Workspace |
-| Prompt Files | [Prompt files](https://code.visualstudio.com/docs/copilot/copilot-customization#_prompt-files-experimental) are reusable prompts for common tasks. | VS Code only | User & Workspace |
-| Custom Chat Modes | [Custom chat modes](https://code.visualstudio.com/docs/copilot/chat/chat-modes#_custom-chat-modes) combine instructions and tools for specific workflows. | VS Code only | User & Workspace |
-| MCP Servers | [MCP Servers](https://code.visualstudio.com/docs/copilot/chat/mcp-servers) enable Copilot to call external services via Model Context Protocol. | VS Code & VS | User & Workspace |
+- [Asset Types Overview](#asset-types-overview)
+- [Feature Comparison](#copilot-features-comparison-table)
 
 ## Copilot Feature Library
 
@@ -85,7 +67,6 @@ Custom instruction files with specific language and framework guidance can be fo
 
 | Title | Description | Install |
 | ----- | ----------- | ------- |
-| [Custom Instructions](instructions/README.md) | Instruction specific coding standards and best practices | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Achat-instructions%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Finstructions%2FREADME.md) [![Install in VS Code](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Achat-instructions%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Finstructions%2FREADME.md) |
 | [Azure Developer CLI Solution Accelerator Instructions](instructions/azure-developer-solution-accelerator.md) | Instruction specific coding standards and best practices | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Achat-instructions%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Finstructions%2Fazure-developer-solution-accelerator.md) [![Install in VS Code](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Achat-instructions%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Finstructions%2Fazure-developer-solution-accelerator.md) |
 | [Copilot Process tracking Instructions](instructions/copilot-thought-logging.instructions.md) | See process Copilot is following where you can edit this to reshape the interaction or save when follow up may be needed | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Achat-instructions%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Finstructions%2Fcopilot-thought-logging.instructions.md) [![Install in VS Code](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Achat-instructions%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Finstructions%2Fcopilot-thought-logging.instructions.md) |
 | [C# 14 Best Practices for AI Code Generation Instructions](instructions/csharp-14-best-practices.instructions.md) | Instruction specific coding standards and best practices | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Achat-instructions%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Finstructions%2Fcsharp-14-best-practices.instructions.md) [![Install in VS Code](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Achat-instructions%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Finstructions%2Fcsharp-14-best-practices.instructions.md) |
@@ -115,9 +96,9 @@ Prompt file examples are found in the [`prompts/`](prompts/) folder.
 | [Create Specification Prompt](prompts/create_specification.prompt.md) | Create a new specification file for the solution, optimized for Generative AI consumption. | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fcreate_specification.prompt.md) [![Install in VS Code](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fcreate_specification.prompt.md) |
 | [.NET/C# Best Practices](prompts/dotnet_best_practices.prompt.md) | | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fdotnet_best_practices.prompt.md) [![Install in VS Code](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fdotnet_best_practices.prompt.md) |
 | [.NET/C# Design Pattern Review](prompts/dotnet_design_pattern_review.prompt.md) | | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fdotnet_design_pattern_review.prompt.md) [![Install in VS Code](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fdotnet_design_pattern_review.prompt.md) |
-| [Update Azure Verified Modules in Bicep Files](prompts/update_avm_modules_in_bicep.prompt.md) | Update Azure Verified Modules to latest versions in Bicep files. | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fupdate_avm_modules_in_bicep.prompt.md) [![Install in VS Code](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fupdate_avm_modules_in_bicep.prompt.md) |
+| [Update Azure Verified Modules in Bicep Files](prompts/update_avm_modules_in_bicep.prompt.md) | Update Azure Verified Modules (AVM) to latest versions in Bicep files. | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fupdate_avm_modules_in_bicep.prompt.md) [![Install in VS Code](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fupdate_avm_modules_in_bicep.prompt.md) |
 | [Implementation Plan Update Prompt](prompts/update_implementation_plan.prompt.md) | Update an existing implementation plan file with new or update requirements to provide new features, refactoring existing code or upgrading packages, design, architecture or infrastructure. | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fupdate_implementation_plan.prompt.md) [![Install in VS Code](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fupdate_implementation_plan.prompt.md) |
-| [Update LLMs Guidance File](prompts/update_llms.prompt.md) | Update the llms.txt file in the root folder to reflect changes in documentation or specifications | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fupdate_llms.prompt.md) [![Install in VS Code](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fupdate_llms.prompt.md) |
+| [Update LLMs Guidance File](prompts/update_llms.prompt.md) | Update the llms.txt file in the root folder to reflect changes in documentation or specifications. | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fupdate_llms.prompt.md) [![Install in VS Code](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fupdate_llms.prompt.md) |
 | [Update Markdown File Index](prompts/update_markdown_file_index.prompt.md) | Update a markdown file section with an index/table of files from a specified folder. | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fupdate_markdown_file_index.prompt.md) [![Install in VS Code](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fupdate_markdown_file_index.prompt.md) |
 | [Update Standard OO Component Documentation](prompts/update_oo_component_documentation.prompt.md) | Update existing object-oriented component documentation following industry best practices and architectural documentation standards. | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fupdate_oo_component_documentation.prompt.md) [![Install in VS Code](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fupdate_oo_component_documentation.prompt.md) |
 | [Update Specification](prompts/update_specification.prompt.md) | Update an existing specification file for the solution, optimized for Generative AI consumption based on new requirements or updates to any existing code. | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fupdate_specification.prompt.md) [![Install in VS Code](https://img.shields.io/badge/VS_Code_Insiders-Install-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Aprompt-files%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FPlagueHO%2Fgithub-copilot-assets-library%2Fmain%2Fprompts%2Fupdate_specification.prompt.md) |
@@ -172,3 +153,57 @@ To use a chat mode:
 Sample MCP (Model Context Protocol) server configurations can be found in the [`mcp/`](mcp/) folder.
 
 MCP servers extend GitHub Copilot agents with external tools, resources, and prompts for specialized tasks.
+
+## Asset Types Overview
+
+| Asset Type | Description | Availability | Configuration |
+|------------|-------------|--------------|---------------|
+| **Copilot Instructions** | Repository-wide instructions to set tone, style, and context for Copilot responses | VS Code & VS | User & Workspace |
+| **Custom Instructions** | Language-specific guidelines that apply to file types (e.g., C# files) | VS Code & VS | User & Workspace |
+| **Prompt Files** | Reusable, standalone prompts for specific tasks with optional variables | VS Code only | User & Workspace |
+| **Custom Chat Modes** | Predefined instructions and tools for specialized workflows and contexts | VS Code only | User & Workspace |
+| **MCP Servers** | External service integrations via Model Context Protocol for enhanced functionality | VS Code & VS | User & Workspace |
+
+## Copilot Features Comparison Table
+
+| Feature Name | Description | VS Code/VS Support | Configuration Level |
+|--------------|-------------|--------------------|---------------------|
+| Copilot Instructions | [Custom instructions](https://code.visualstudio.com/docs/copilot/copilot-customization#_custom-instructions) to set tone, style, and context for Copilot responses. | VS Code & VS | User & Workspace |
+| Custom Code Generation Instructions | [Code generation instructions](https://code.visualstudio.com/docs/copilot/copilot-customization#_custom-instructions-examples) for code generation tasks. | VS Code only | User & Workspace |
+| Prompt Files | [Prompt files](https://code.visualstudio.com/docs/copilot/copilot-customization#_prompt-files-experimental) are reusable prompts for common tasks. | VS Code only | User & Workspace |
+| Custom Chat Modes | [Custom chat modes](https://code.visualstudio.com/docs/copilot/chat/chat-modes#_custom-chat-modes) combine instructions and tools for specific workflows. | VS Code only | User & Workspace |
+| MCP Servers | [MCP Servers](https://code.visualstudio.com/docs/copilot/chat/mcp-servers) enable Copilot to call external services via Model Context Protocol. | VS Code & VS | User & Workspace |
+
+## 📚 Additional Resources
+
+- [VS Code Copilot Customization Documentation](https://code.visualstudio.com/docs/copilot/copilot-customization) - Official Microsoft documentation
+- [GitHub Copilot Chat Documentation](https://code.visualstudio.com/docs/copilot/chat/copilot-chat) - Complete chat feature guide
+- [Custom Chat Modes](https://code.visualstudio.com/docs/copilot/chat/chat-modes) - Advanced chat configuration
+- [VS Code Settings](https://code.visualstudio.com/docs/getstarted/settings) - General VS Code configuration guide
+
+## 🛠️ Development Configuration
+
+This repository uses various configuration files to ensure consistent code style and avoid issues with line endings:
+
+- [`.editorconfig`](.editorconfig) - Defines coding styles across different editors and IDEs
+- [`.gitattributes`](.gitattributes) - Ensures consistent line endings in text files
+- [`.vscode/settings.json`](.vscode/settings.json) - VS Code-specific settings for this repository
+- [`.vscode/extensions.json`](.vscode/extensions.json) - Recommended VS Code extensions
+
+> 💡 **Note**: All markdown files in this repository use LF line endings (Unix-style) to avoid mixed line endings issues. The repository is configured to automatically handle line endings conversion.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+## ™️ Trademarks
+
+This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft
+trademarks or logos is subject to and must follow
+[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
+Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
+Any use of third-party trademarks or logos are subject to those third-party's policies.
