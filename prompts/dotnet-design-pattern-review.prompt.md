@@ -1,9 +1,10 @@
 ---
-mode: 'ask'
+mode: 'agent'
+description: 'Review the C#/.NET code for design pattern implementation and suggest improvements.'
 ---
 # .NET/C# Design Pattern Review
 
-Review the C#/.NET code in ${selection} for design pattern implementation and suggest improvements for the solution/project.
+Review the C#/.NET code in ${selection} for design pattern implementation and suggest improvements for the solution/project. Do not make any changes to the code, just provide a review.
 
 ## Required Design Patterns
 
@@ -32,7 +33,7 @@ Review the C#/.NET code in ${selection} for design pattern implementation and su
 ## Improvement Focus Areas
 
 - **Command Handlers**: Validation in base class, consistent error handling, proper resource management
-- **Factories**: Dependency configuration, service provider integration, disposal patterns  
+- **Factories**: Dependency configuration, service provider integration, disposal patterns
 - **Providers**: Connection management, async patterns, exception handling and logging
 - **Configuration**: Data annotations, validation attributes, secure sensitive value handling
 - **AI/ML Integration**: Semantic Kernel patterns, structured output handling, model configuration
