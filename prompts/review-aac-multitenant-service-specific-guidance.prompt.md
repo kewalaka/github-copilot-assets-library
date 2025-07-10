@@ -24,6 +24,7 @@ Azure Architecture Center provides multitenant best practices at `https://learn.
    - Find service "What's New" pages
    - Locate multitenant-specific guidance
    - Check for feature updates since review date
+4. **Search for updates** using #fetch: `https://azure.microsoft.com/updates/?searchterms=<Name+of+Azure+Service>`
 4. **Continue searching** until all sources exhausted
 
 ## Relevance Criteria
