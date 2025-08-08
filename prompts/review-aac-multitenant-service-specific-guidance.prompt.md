@@ -1,7 +1,7 @@
 ---
 mode: 'agent'
 description: 'Review Azure Architecture Center multitenant service-specific guidance to ensure it is up-to-date with multitenant features provided by the service and guidance is still relevant.'
-tools: ['codebase', 'fetch', 'githubRepo', 'search', 'searchResults', 'microsoft.docs.mcp', 'azure_get_code_gen_best_practices', 'azure_get_deployment_best_practices', 'azure_query_learn']
+tools: ['codebase', 'fetch', 'searchResults', 'githubRepo', 'search', 'Microsoft Docs', 'websearch']
 ---
 
 # Review Azure Architecture Center Multitenant Service-Specific Guidance document
