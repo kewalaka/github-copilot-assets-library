@@ -18,6 +18,7 @@ This folder contains example custom chat modes for GitHub Copilot. For more info
 | C#/.NET Janitor | [csharp-dotnet-janitor.chatmode.md](csharp-dotnet-janitor.chatmode.md) | Perform janitorial tasks on C#/.NET code including cleanup, modernization, and tech debt remediation. |
 | Debug | [debug.chatmode.md](debug.chatmode.md) | Debug your application to find and fix a bug |
 | Demonstrate Understanding | [demonstrate-understanding.chatmode.md](demonstrate-understanding.chatmode.md) | Validate user understanding of code, design patterns, and implementation details through guided questioning. |
+| Developer Flow for GPT-5: Autonomous Coding Agent | [developer-flow-gpt-5.chatmode.md](developer-flow-gpt-5.chatmode.md) |  |
 | Electron Code Review | [electron-angular-native.chatmode.md](electron-angular-native.chatmode.md) | Code Review Mode tailored for Electron app with Node.js backend (main), Angular frontend (render), and native integration layer (e.g., AppleScript, shell, or native tooling). Services in other repos are not reviewed here. |
 | Expert .NET software engineer | [expert-dotnet-software-engineer.chatmode.md](expert-dotnet-software-engineer.chatmode.md) | Provide expert .NET software engineering guidance using modern software design patterns. |
 | Expert React Frontend Engineer | [expert-react-frontend-engineer.chatmode.md](expert-react-frontend-engineer.chatmode.md) | Provide expert React frontend engineering guidance using modern TypeScript and design patterns. |
