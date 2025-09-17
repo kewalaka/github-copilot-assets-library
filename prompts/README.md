@@ -25,6 +25,7 @@ A list of prompt files available in this repository:
 | Create Specification | [create-specification.prompt.md](create-specification.prompt.md) | Create a new specification file for the solution, optimized for Generative AI consumption. |
 | Create Spring Boot Java project prompt | [create-spring-boot-java-project.prompt.md](create-spring-boot-java-project.prompt.md) | Create Spring Boot Java project skeleton |
 | Create Spring Boot Kotlin project prompt | [create-spring-boot-kotlin-project.prompt.md](create-spring-boot-kotlin-project.prompt.md) | Create Spring Boot Kotlin project skeleton |
+| Create Technical Spike Document | [create-technical-spike.prompt.md](create-technical-spike.prompt.md) | Create time-boxed technical spike documents for researching and resolving critical development decisions before implementation. |
 | C# Async Programming Best Practices | [csharp-async.prompt.md](csharp-async.prompt.md) | Get best practices for C# async programming |
 | C# Documentation Best Practices | [csharp-docs.prompt.md](csharp-docs.prompt.md) | Ensure that C# types are documented with XML comments and follow best practices for documentation. |
 | MSTest Best Practices | [csharp-mstest.prompt.md](csharp-mstest.prompt.md) | Get best practices for MSTest unit testing, including data-driven tests |
